@@ -14,7 +14,6 @@ class ClothesViewController: UIViewController {
     
     var categoriesNamesArray = [String]()
     var subcategoriesNamesArray = [Subcategory]()
-    var subArray: [String] = []
     var arrayOfMenSubcategories: [String] = []
 
     override func viewDidLoad() {
@@ -26,15 +25,6 @@ class ClothesViewController: UIViewController {
                 let array = Array(categories.values)
                 array.forEach { (value) in
                     self.categoriesNamesArray.append(value.name)
-                    if value.subcategories.count == 0 {
-                        return
-                    } else if Int(value.sortOrder) == 29 && value.subcategories.count != 0 {
-                        self.subcategoriesNamesArray.append(contentsOf: value.subcategories)
-                        print(self.subcategoriesNamesArray.count)
-                        for i in 0...self.subcategoriesNamesArray.count - 1 {
-                            self.subArray.append(self.subcategoriesNamesArray[i].name)
-                        }
-                    }
                 }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -49,9 +39,6 @@ class ClothesViewController: UIViewController {
                 self.categoriesNamesArray = sortedArray(array: self.categoriesNamesArray, firstString: "Женская")
                 self.categoriesNamesArray = sortedArray(array: self.categoriesNamesArray, firstString: "Мужская")
                 self.categoriesNamesArray.removeLast(8)
-                //Create Subcategories
-                
-                print(self.subArray)
             }
         }
     }

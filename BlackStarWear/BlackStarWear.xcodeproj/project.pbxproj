@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */; };
+		A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */; };
+		A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312724B0F004003E5D88 /* GoodsLoader.swift */; };
+		A54B312B24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */; };
+		A54B312D24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */; };
 		A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CC89524A3818E0056513E /* ForgotPasswordViewController.swift */; };
 		A54CC89824A39DD50056513E /* ReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CC89724A39DD50056513E /* ReturnViewController.swift */; };
 		A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550286124A0E1F700774E0E /* AppDelegate.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoriesViewController.swift; sourceTree = "<group>"; };
+		A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
+		A54B312724B0F004003E5D88 /* GoodsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsLoader.swift; sourceTree = "<group>"; };
+		A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTracksuitGoodsViewController.swift; sourceTree = "<group>"; };
+		A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTraksuitGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54CC89524A3818E0056513E /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A54CC89724A39DD50056513E /* ReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnViewController.swift; sourceTree = "<group>"; };
 		A550285E24A0E1F600774E0E /* BlackStarWear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackStarWear.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A54B312224B0E153003E5D88 /* Men's subcategories screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */,
+				A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */,
+			);
+			path = "Men's subcategories screen";
+			sourceTree = "<group>";
+		};
+		A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */,
+				A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */,
+			);
+			path = "Men's Tracksuit Goods Screen";
+			sourceTree = "<group>";
+		};
 		A550285524A0E1F600774E0E = {
 			isa = PBXGroup;
 			children = (
@@ -194,9 +222,12 @@
 		A574A9FB24AE7C2800B23AA8 /* CategoriesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */,
+				A54B312224B0E153003E5D88 /* Men's subcategories screen */,
 				A5509BFE24A208EF00C3EBD7 /* CategoriesLoader.swift */,
 				A550288324A10B5F00774E0E /* ClothesViewController.swift */,
 				A5509BF924A2009600C3EBD7 /* CategoryTableViewCell.swift */,
+				A54B312724B0F004003E5D88 /* GoodsLoader.swift */,
 			);
 			path = CategoriesScreen;
 			sourceTree = "<group>";
@@ -295,21 +326,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */,
+				A54B312D24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift in Sources */,
 				A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */,
 				A550288424A10B5F00774E0E /* ClothesViewController.swift in Sources */,
 				A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */,
 				A550288824A10B9E00774E0E /* ShoppingBagViewController.swift in Sources */,
+				A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */,
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
+				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
 				A550287624A0F78E00774E0E /* TabBarController.swift in Sources */,
 				A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */,
+				A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */,
 				A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */,
 				A550286424A0E1F700774E0E /* SceneDelegate.swift in Sources */,
 				A550288A24A10BA900774E0E /* ProfileViewController.swift in Sources */,
 				A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */,
 				A550288624A10B8A00774E0E /* HomeViewController.swift in Sources */,
 				A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */,
+				A54B312B24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift in Sources */,
 				A5509BFA24A2009600C3EBD7 /* CategoryTableViewCell.swift in Sources */,
 				A54CC89824A39DD50056513E /* ReturnViewController.swift in Sources */,
 				A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */,
