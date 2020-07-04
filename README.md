@@ -1,0 +1,1 @@
+This is an educational project in which the online-store is being created. All the infromation used in this project only for educational and not for commercial purposes. Данный репозиторий является образовательным проектом в котором создается онлайн-магазин. Вся информация используемая в данном проекте используется исключительно в образовательных целях. и никак не в коммерческих.
