@@ -12,6 +12,7 @@ class MensSubcategoriesViewController: UIViewController {
     
     var subcategoriesNamesArray = [Subcategory]()
     var arrayOfMenSubcategories: [String] = []
+    var sortedMensSubcategories: [String] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,18 +37,10 @@ class MensSubcategoriesViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                //Sorting of catagories array beign made by sortedArray function
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Все товары категории")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Пижамы")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Шорты")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Брюки")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Куртки и бомберы")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Толстовки и худи")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Футболки и майки")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Спортивные костюмы")
-                self.arrayOfMenSubcategories = sortedArray(array: self.arrayOfMenSubcategories, string: "Джинсы")
-                self.arrayOfMenSubcategories.removeLast(39)
-//                print(self.arrayOfMenSubcategories)
+                let subcategoryOrdering = HardCodedOrdering(ordering: "Джинсы", "Спортивные костюмы", "Футболки и майки", "Толстовки и худи", "Куртки и бомберы", "Брюки", "Шорты", "Пижамы", "Все товары категории")
+                let someSubcategories = self.arrayOfMenSubcategories
+                let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
+                self.sortedMensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
         }
     }
@@ -65,52 +58,52 @@ func sortedArray(array: [String], string: String) -> [String] {
 
 extension MensSubcategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayOfMenSubcategories.count
+        sortedMensSubcategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Jeans") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 1 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Tracksuit") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 2 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "T-Shirt") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 3 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Hoodie") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 4 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Jacket") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 5 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Pants") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 6 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Shorts") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else if indexPath.row == 7 {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Pyjamas") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
         } else {
-            let subcategory = arrayOfMenSubcategories[indexPath.row]
+            let subcategory = sortedMensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "AllGoods") as! MensSubcategoryTableViewCell
             cell.mensSubcategoryNameLabel.text = subcategory
             return cell
