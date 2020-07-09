@@ -18,7 +18,7 @@ struct GoodsValue: Codable {
     let mainImage: String
     let productImages: [ProductImage]
     let offers: [Offer]
-    let recommendedProductIDs: [RecommendedProductID]
+    let recommendedProductIDs: [String]
     let instagramPhotos: [JSONAny]
     let price: String
     let oldPrice, tag: String?
@@ -114,16 +114,6 @@ enum Size: String, Codable {
 // MARK: - ProductImage
 struct ProductImage: Codable {
     let imageURL, sortOrder: String
-}
-
-enum RecommendedProductID: String, Codable {
-    case the5891_219 = "5891_219"
-    case the6887_219 = "6887_219"
-    case the6992_219 = "6992_219"
-    case the7085_219 = "7085_219"
-    case the7113_219 = "7113_219"
-    case the7195_219 = "7195_219"
-    case the7233_37934 = "7233_37934"
 }
 
 typealias Goods = [String: GoodsValue]
