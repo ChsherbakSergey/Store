@@ -23,6 +23,7 @@ class MensTracksuitGoodsViewController: UIViewController {
     var tracksuitMadeInArray: [String] = []
     var tracksuitLookAfterArray: [String] = []
     var tracksuitDescriptionArray: [String] = []
+    var allElements: [Dictionary<String, GoodsValue>.Values.Element] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,6 +35,7 @@ class MensTracksuitGoodsViewController: UIViewController {
             if let goods = listOfGoods {
                 let array = Array(goods.values)
                 array.forEach { (value) in
+                    self.allElements = array
                     self.tracksuitNameArray.append(value.name)
                     self.tracksuitImageArray.append(value.mainImage)
                     self.tracksuitPriceArray.append(value.price)
@@ -49,7 +51,6 @@ class MensTracksuitGoodsViewController: UIViewController {
                 }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
-                    print(self.tracksuitDecorativeElementArray)
                 }
             }
         }
@@ -90,17 +91,21 @@ extension MensTracksuitGoodsViewController: UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let tracksuitName = tracksuitNameArray[indexPath.row]
-        let tracksuitPrice = tracksuitPriceArray[indexPath.row]
+//        let tracksuitName = tracksuitNameArray[indexPath.row]
+        let tracksuitName = allElements[indexPath.row].name
+//        let tracksuitPrice = tracksuitPriceArray[indexPath.row]
+        let tracksuitPrice = allElements[indexPath.row].price
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Tracksuit", for: indexPath) as! MensTracksuitGoodsCollectionViewCell
         cell.mensTracksuitPriceLabel.text = String(tracksuitPrice.dropLast(5)) + " руб."
         cell.mensTracksuitNameLabel.text = tracksuitName
-        cell.setImage(from: "https://blackstarshop.ru/" + "\(tracksuitImageArray[indexPath.row])")
+//        cell.setImage(from: "https://blackstarshop.ru/" + "\(tracksuitImageArray[indexPath.row])")
+        cell.setImage(from: "https://blackstarshop.ru/" + "\(allElements[indexPath.row].mainImage)")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = [tracksuitNameArray[indexPath.row], tracksuitPriceArray[indexPath.row], tracksuitImageArray[indexPath.row], tracksuitColorArray[indexPath.row], tracksuitArticulArray[indexPath.row], tracksuitDecorativeElementArray[indexPath.row], tracksuitDrawingArray[indexPath.row], tracksuitSesonArray[indexPath.row], tracksuitCompositionArray[indexPath.row], tracksuitMadeInArray[indexPath.row], tracksuitLookAfterArray[indexPath.row], tracksuitDescriptionArray[indexPath.row]]
+//        let data = [allElements[indexPath.row].name, allElements[indexPath.row].price, allElements[indexPath.row].mainImage, allElements[indexPath.row].colorName, allElements[indexPath.row].article, allElements[indexPath.row].attributes[indexPath.row].декоративныйЭлемент] as [Any]
         performSegue(withIdentifier: "ToDetail", sender: data)
     }
     

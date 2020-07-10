@@ -55,7 +55,7 @@ class DetailMensTracksuitViewController: UIViewController {
         } else if tracksuitData[3] == "Черный/Золотой" {
             menDetailTracksuitColorImageView.backgroundColor = UIColor.systemYellow
         }
-        
+
         menDetailTracksuitColorImageView.layer.cornerRadius = menDetailTracksuitColorImageView.frame.size.height / 2
         menDetailTracksuitArticulLabel.text = tracksuitData[4]
         menDetailTracksuitDecorativeElementLabel.text = tracksuitData[5]
