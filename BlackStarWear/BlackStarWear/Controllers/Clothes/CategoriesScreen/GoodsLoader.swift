@@ -54,6 +54,7 @@ enum ДекоративныйЭлемент: String, Codable {
     case вышивка = "вышивка"
     case нашивка = "нашивка"
     case принт = "принт"
+    case принтнашивка = "принт; нашивка"
 }
 
 enum Рисунок: String, Codable {
@@ -61,6 +62,8 @@ enum Рисунок: String, Codable {
     case звезды = "звезды"
     case логотип = "логотип"
     case надпись = " надпись"
+    case звезда = "звезда"
+    case животные = " животные"
 }
 
 enum Сезон: String, Codable {
@@ -71,6 +74,7 @@ enum Состав: String, Codable {
     case the100Хлопок = "100% хлопок"
     case the80Хлопок20Полиэстер = "80% хлопок; 20% полиэстер"
     case the80Хлопок20Эластан = "80% хлопок; 20% эластан"
+    case хлопок = "100%  хлопок"
 }
 
 enum СтранаПроизводителя: String, Codable {
@@ -86,6 +90,10 @@ enum ColorImageURL: String, Codable {
     case imageCatalogStyleColorBlackGoldJpg = "image/catalog/style/color/black-gold.jpg"
     case imageCatalogStyleColorRedFf0000Jpg = "image/catalog/style/color/red_ff0000.jpg"
     case imageCatalogStyleColorVinousJpg = "image/catalog/style/color/vinous.jpg"
+    case imageCatalogStyleColorPustoPng = "image/catalog/style/color/pusto.png"
+    case imageCatalogStyleColorWhiteGif = "image/catalog/style/color/white.gif"
+    case imageCatalogStyleColorGrey838383Jpg = "image/catalog/style/color/grey_838383.jpg"
+    case imageCatalogStyleColorPurpleJpg = "image/catalog/style/color/purple.jpg"
 }
 
 enum ColorName: String, Codable {
@@ -93,6 +101,11 @@ enum ColorName: String, Codable {
     case красный = "Красный"
     case черный = "Черный"
     case черныйЗолотой = "Черный/Золотой"
+    case темноСиний = "Темно-синий"
+    case белый = "Белый"
+    case серый = "Серый"
+    case фиолетовый = "Фиолетовый"
+    case чайнаяроза = "Чайная роза"
 }
 
 // MARK: - Offer
@@ -109,6 +122,8 @@ enum Size: String, Codable {
     case xs = "XS"
     case xxl = "XXL"
     case xxs = "XXS"
+    case xxxl = "XXXL"
+    case единыйразмер = "Единый размер"
 }
 
 // MARK: - ProductImage

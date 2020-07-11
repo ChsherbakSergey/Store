@@ -11,6 +11,8 @@
 		A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */; };
 		A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */; };
 		A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4424B8FFCC007EB792 /* NewsSubcategoriesViewController.swift */; };
+		A54AAE4924B90C7A007EB792 /* MensTshirtGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */; };
+		A54AAE4B24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */; };
 		A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */; };
 		A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */; };
 		A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312724B0F004003E5D88 /* GoodsLoader.swift */; };
@@ -48,6 +50,9 @@
 		A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */; };
 		A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0324A2625200C3EBD7 /* InformationCellData.swift */; };
 		A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */; };
+		A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */; };
+		A551013324B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */; };
+		A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */; };
 		A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */; };
 		A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */; };
 		A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */; };
@@ -62,6 +67,8 @@
 		A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE4424B8FFCC007EB792 /* NewsSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubcategoriesViewController.swift; sourceTree = "<group>"; };
+		A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtGoodsViewController.swift; sourceTree = "<group>"; };
+		A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoriesViewController.swift; sourceTree = "<group>"; };
 		A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A54B312724B0F004003E5D88 /* GoodsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsLoader.swift; sourceTree = "<group>"; };
@@ -101,6 +108,9 @@
 		A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		A5509C0324A2625200C3EBD7 /* InformationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCellData.swift; sourceTree = "<group>"; };
 		A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTshirtViewController.swift; sourceTree = "<group>"; };
+		A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtDetailPopUpViewController.swift; sourceTree = "<group>"; };
+		A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsAGiftCertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendYourselfContainerViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +149,23 @@
 			path = "New's subcategories screen";
 			sourceTree = "<group>";
 		};
+		A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */,
+				A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */,
+				A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */,
+				A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */,
+				A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */,
+			);
+			path = "Men's T-shirt Goods Screen";
+			sourceTree = "<group>";
+		};
 		A54B312224B0E153003E5D88 /* Men's subcategories screen */ = {
 			isa = PBXGroup;
 			children = (
+				A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */,
+				A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */,
 				A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */,
 				A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */,
 			);
@@ -326,7 +350,6 @@
 				A54F25E824B8792500567AF8 /* Acsessories's subcategories screen */,
 				A54F25E324B8674600567AF8 /* Children's subcategories screen */,
 				A55E6C4F24B7B71800E5CA46 /* Women's subcategories screen */,
-				A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */,
 				A54B312224B0E153003E5D88 /* Men's subcategories screen */,
 				A5509BFE24A208EF00C3EBD7 /* CategoriesLoader.swift */,
 				A550288324A10B5F00774E0E /* ClothesViewController.swift */,
@@ -430,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */,
+				A54AAE4924B90C7A007EB792 /* MensTshirtGoodsViewController.swift in Sources */,
 				A54F25EF24B8982700567AF8 /* CollectionsSubcategoriesTableViewCell.swift in Sources */,
 				A54B312D24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift in Sources */,
 				A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */,
@@ -443,6 +467,7 @@
 				A54AAE3E24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift in Sources */,
 				A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */,
 				A550288824A10B9E00774E0E /* ShoppingBagViewController.swift in Sources */,
+				A551013324B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift in Sources */,
 				A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */,
 				A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */,
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
@@ -450,6 +475,7 @@
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
 				A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */,
+				A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
 				A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */,
 				A550287624A0F78E00774E0E /* TabBarController.swift in Sources */,
@@ -460,8 +486,10 @@
 				A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */,
 				A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */,
 				A550286424A0E1F700774E0E /* SceneDelegate.swift in Sources */,
+				A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */,
 				A550288A24A10BA900774E0E /* ProfileViewController.swift in Sources */,
 				A54E24DB24B758C300158BDE /* ImageLoader.swift in Sources */,
+				A54AAE4B24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift in Sources */,
 				A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */,
 				A550288624A10B8A00774E0E /* HomeViewController.swift in Sources */,
 				A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */,
