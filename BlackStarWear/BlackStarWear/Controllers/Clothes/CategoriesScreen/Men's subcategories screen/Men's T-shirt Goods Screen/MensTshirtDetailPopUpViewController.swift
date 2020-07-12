@@ -46,8 +46,10 @@ extension MensTshirtDetailPopUpViewController: UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let size = objects?.offers[indexPath.row].size.rawValue
+        let quantity = objects?.offers[indexPath.row].quantity
         let cell = tableView.dequeueReusableCell(withIdentifier: "SizeAndQuantity") as! MensTshirtPopUpTableViewCell
         cell.sizeLabel.text = size
+        cell.quantityLabel.text = "\(quantity ?? "0") шт."
         return cell
     }
     
