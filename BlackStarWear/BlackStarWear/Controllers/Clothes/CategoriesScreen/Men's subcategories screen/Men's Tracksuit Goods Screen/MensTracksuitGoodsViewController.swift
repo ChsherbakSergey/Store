@@ -29,6 +29,7 @@ class MensTracksuitGoodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
         loadGoods(goodsID: 42) {
@@ -55,6 +56,16 @@ class MensTracksuitGoodsViewController: UIViewController {
             }
         }
     }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        title = "Спортивные костюмы"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToDetail" {
             let destVC = segue.destination as! DetailMensTracksuitViewController

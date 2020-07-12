@@ -18,6 +18,8 @@ class ClothesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavegationBar()
+        //Delegates
         tableView.delegate = self
         tableView.dataSource = self
         loadCategories() {
@@ -46,6 +48,15 @@ class ClothesViewController: UIViewController {
             }
         }
     }
+    
+    func setNavegationBar() {
+        //Set backBarButtonItem
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        //Set navigation Title
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 16)!]
+    }
+    
 }
 
 //Creating func to sort Array because API gives back categories in random order

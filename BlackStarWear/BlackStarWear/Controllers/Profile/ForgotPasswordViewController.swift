@@ -10,14 +10,21 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    @IBOutlet weak var cancelButtonOutlet: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCancelButton()
+    }
+    
+    func setCancelButton() {
+        cancelButtonOutlet.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
     }
     
     @IBAction func CancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     
     
 }

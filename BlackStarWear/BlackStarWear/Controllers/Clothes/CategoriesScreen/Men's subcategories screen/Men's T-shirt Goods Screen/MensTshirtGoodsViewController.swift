@@ -17,6 +17,7 @@ class MensTshirtGoodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
         loadGoods(goodsID: 40) {
@@ -40,6 +41,15 @@ class MensTshirtGoodsViewController: UIViewController {
 //            destVC.objects = sender as! [GoodsValue]
 //        }
 //    }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        title = "Футболки и майки"
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

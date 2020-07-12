@@ -18,6 +18,13 @@ class MensSubcategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        
+        //Delegates
         tableView.delegate = self
         tableView.dataSource = self
         loadCategories() {

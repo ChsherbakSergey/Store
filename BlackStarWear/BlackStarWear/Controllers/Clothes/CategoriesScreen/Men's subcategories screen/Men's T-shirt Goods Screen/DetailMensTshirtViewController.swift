@@ -36,12 +36,19 @@ class DetailMensTshirtViewController: UIViewController {
     
     @IBOutlet weak var mensTshirtDescriptionLabel: UILabel!
     
+    @IBOutlet weak var chooseSizeButtonOutlet: UIButton!
+    
     var objects: GoodsValue?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         setUI()
         setImage(from: "https://blackstarshop.ru/" + "\(objects!.mainImage)")
+    }
+    
+    func setNavigationBar() {
+        title = objects?.name
     }
     
     func setUI() {
@@ -76,7 +83,7 @@ class DetailMensTshirtViewController: UIViewController {
         mensTshirtSesonLabel.text = objects?.attributes[2].сезон?.rawValue ?? "Не указано"
         mensTshirtCompositionLabel.text = objects?.attributes[3].состав?.rawValue ?? "Не указано"
         mensTshirtMadeInLabel.text = objects?.attributes[4].странаПроизводителя?.rawValue ?? "Не указано"
-        mensTshirtLookAfterLabel.text = objects?.attributes[5].уходЗаВещами?.rawValue ?? "Не указано"
+        mensTshirtLookAfterLabel.text = objects?.attributes[4].уходЗаВещами?.rawValue ?? "Не указано"
         mensTshirtDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
     }
     
@@ -105,8 +112,17 @@ class DetailMensTshirtViewController: UIViewController {
         if segue.identifier == "PopUp" {
             let destVC = segue.destination as! MensTshirtDetailPopUpViewController
             destVC.objects = sender as? GoodsValue
+            destVC.sizeDelegate = self
         }
     }
     
+}
+
+
+extension DetailMensTshirtViewController: MensTshirtDetailPopUpViewControllerDelegate {
+    
+    func didTapSize(size: String) {
+        chooseSizeButtonOutlet.setTitle("Размер: " + size, for: .normal)
+    }
     
 }

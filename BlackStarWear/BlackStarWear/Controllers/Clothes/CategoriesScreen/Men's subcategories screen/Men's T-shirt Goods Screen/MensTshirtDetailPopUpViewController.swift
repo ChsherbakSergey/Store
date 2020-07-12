@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol MensTshirtDetailPopUpViewControllerDelegate {
+    func didTapSize(size: String)
+}
+
 class MensTshirtDetailPopUpViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var sizeDelegate: MensTshirtDetailPopUpViewControllerDelegate?
     
     var objects: GoodsValue?
 
@@ -35,7 +41,7 @@ class MensTshirtDetailPopUpViewController: UIViewController {
 extension MensTshirtDetailPopUpViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        return objects?.offers.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,6 +53,9 @@ extension MensTshirtDetailPopUpViewController: UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let data = objects?.offers[indexPath.row].size.rawValue
+        sizeDelegate?.didTapSize(size: data ?? "Размер не выбран")
+        dismiss(animated: true, completion: nil)
     }
     
 }

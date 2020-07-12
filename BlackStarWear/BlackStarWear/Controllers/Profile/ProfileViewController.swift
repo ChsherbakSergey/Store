@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         //Call function to create titles and assign delegate and dataSource delegate to tableView
         titles = createTitlesArray()
         informationTableView.delegate = self
@@ -34,6 +35,15 @@ class ProfileViewController: UIViewController {
         //Call func to design buttons (numberButton and cancelButton) in PhonePopUpView
         setupDesignForButtonInPhonePopUpView()
         popUpPhoneView.backgroundColor = .clear
+    }
+    
+    func setNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        //Set navigation Title
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 16)!]
     }
     
     //Create a function to design buttons (numberButton and cancelButton) in PhonePopUpView
