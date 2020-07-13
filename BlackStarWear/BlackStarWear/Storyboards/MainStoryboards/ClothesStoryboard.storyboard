@@ -716,6 +716,18 @@
                     <navigationItem key="navigationItem" title="Женская" id="N0C-kC-7Rv"/>
                     <connections>
                         <outlet property="tableView" destination="QZJ-6J-Mzy" id="A9x-Md-M76"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Tracksuit" id="g2j-z5-KeK"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="T-shirt" id="QwY-7N-kkU"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Hoodie" id="Xeh-xI-qpc"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Dress" id="ntj-dt-FcG"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Shirt" id="c57-Cp-1kG"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Jacket" id="uNc-mV-b3w"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Shorts" id="48g-CG-JnG"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Pants" id="34L-Cz-rFP"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Skirt" id="C9Q-wm-gPJ"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Underwear" id="fg5-oE-2rL"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="Pyjamas" id="kaZ-B5-fuQ"/>
+                        <segue destination="5TM-lm-ycx" kind="show" identifier="AllGoods" id="hMo-qP-j4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3p-oI-QHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1338,6 +1350,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrk-Fq-vVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2771" y="121"/>
+        </scene>
+        <!--Universal Goods View Controller-->
+        <scene sceneID="yIM-5L-dNv">
+            <objects>
+                <viewController id="5TM-lm-ycx" customClass="UniversalGoodsViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R4U-Ev-ANq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ATx-TY-1vt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0hq-Wk-pBm">
+                                    <size key="itemSize" width="203" height="368"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Universal" id="RhP-Yf-Tel" customClass="UniversalGoodsCollectionViewCell" customModule="BlackStarWear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="368"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3GS-LB-777">
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="368"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZp-Lo-q40">
+                                                    <rect key="frame" x="10" y="20" width="183" height="238"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="eZp-Lo-q40" secondAttribute="height" multiplier="1:1.3" id="f6U-52-bJR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="UEK-L1-jtZ">
+                                                    <rect key="frame" x="15" y="266" width="168" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwv-gl-xxm">
+                                                    <rect key="frame" x="15" y="288.5" width="178" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eZp-Lo-q40" secondAttribute="trailing" constant="10" id="76Y-IX-wJr"/>
+                                                <constraint firstItem="eZp-Lo-q40" firstAttribute="leading" secondItem="3GS-LB-777" secondAttribute="leading" constant="10" id="7s1-Gq-VRE"/>
+                                                <constraint firstItem="iwv-gl-xxm" firstAttribute="leading" secondItem="3GS-LB-777" secondAttribute="leading" constant="15" id="EGk-C5-QtJ"/>
+                                                <constraint firstItem="UEK-L1-jtZ" firstAttribute="top" secondItem="eZp-Lo-q40" secondAttribute="bottom" constant="8" id="O8v-8g-hhQ"/>
+                                                <constraint firstItem="UEK-L1-jtZ" firstAttribute="leading" secondItem="3GS-LB-777" secondAttribute="leading" constant="15" id="Xpf-lj-U2M"/>
+                                                <constraint firstAttribute="trailing" secondItem="iwv-gl-xxm" secondAttribute="trailing" constant="10" id="aNp-AV-qKb"/>
+                                                <constraint firstItem="eZp-Lo-q40" firstAttribute="top" secondItem="3GS-LB-777" secondAttribute="top" constant="20" id="ds6-ge-BFU"/>
+                                                <constraint firstItem="iwv-gl-xxm" firstAttribute="top" secondItem="UEK-L1-jtZ" secondAttribute="bottom" constant="2" id="uvg-Py-MuY"/>
+                                                <constraint firstAttribute="trailing" secondItem="UEK-L1-jtZ" secondAttribute="trailing" constant="20" id="y38-yv-LPq"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="203" height="368"/>
+                                        <connections>
+                                            <outlet property="universalImageView" destination="eZp-Lo-q40" id="3Gm-UN-tXU"/>
+                                            <outlet property="universalNameLabel" destination="iwv-gl-xxm" id="BkN-j4-bbb"/>
+                                            <outlet property="universalPriceLabel" destination="UEK-L1-jtZ" id="xqm-at-uL1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ATx-TY-1vt" firstAttribute="leading" secondItem="ASP-tW-8xN" secondAttribute="leading" id="PSB-Cm-3YO"/>
+                            <constraint firstItem="ATx-TY-1vt" firstAttribute="top" secondItem="ASP-tW-8xN" secondAttribute="top" id="WaJ-Ny-Qdh"/>
+                            <constraint firstItem="ASP-tW-8xN" firstAttribute="trailing" secondItem="ATx-TY-1vt" secondAttribute="trailing" id="nvR-rp-DPt"/>
+                            <constraint firstItem="ASP-tW-8xN" firstAttribute="bottom" secondItem="ATx-TY-1vt" secondAttribute="bottom" id="p9s-eM-bkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ASP-tW-8xN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XVp-fc-mHa"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ATx-TY-1vt" id="sRm-3u-dcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ec-Qf-vTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="1323.8839285714284"/>
         </scene>
         <!--Коллекции-->
         <scene sceneID="YSy-Zg-YRF">
@@ -2321,6 +2417,9 @@
             <point key="canvasLocation" x="1047.8260869565217" y="-609.375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kaZ-B5-fuQ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="tshirt" width="24" height="24"/>
     </resources>

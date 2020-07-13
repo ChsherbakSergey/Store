@@ -31,6 +31,8 @@
 		A54EB02824BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */; };
 		A54EB02A24BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */; };
 		A54EB02C24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */; };
+		A54EB02F24BCDAF8001D0608 /* UniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */; };
+		A54EB03124BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */; };
 		A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */; };
 		A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */; };
 		A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */; };
@@ -100,6 +102,8 @@
 		A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensDetailUniversalGoodsViewController.swift; sourceTree = "<group>"; };
 		A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalDetailPopUpViewController.swift; sourceTree = "<group>"; };
 		A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
+		A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalGoodsViewController.swift; sourceTree = "<group>"; };
+		A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsViewController.swift; sourceTree = "<group>"; };
 		A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensHoodieViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,15 @@
 				A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */,
 				A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */,
 				A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */,
+			);
+			path = "Universal Goods Screen";
+			sourceTree = "<group>";
+		};
+		A54EB02D24BCDABB001D0608 /* Universal Goods Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */,
+				A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */,
 			);
 			path = "Universal Goods Screen";
 			sourceTree = "<group>";
@@ -423,6 +436,7 @@
 		A574A9FB24AE7C2800B23AA8 /* CategoriesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A54EB02D24BCDABB001D0608 /* Universal Goods Screen */,
 				A54AAE4124B8FF9A007EB792 /* New's subcategories screen */,
 				A54AAE3C24B8FAD9007EB792 /* Outlets's subcategories screen */,
 				A54F25ED24B8980400567AF8 /* Collections's subcategories screen */,
@@ -567,12 +581,14 @@
 				A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */,
 				A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */,
 				A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */,
+				A54EB03124BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift in Sources */,
 				A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */,
 				A54EB02624BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift in Sources */,
 				A54F25EA24B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift in Sources */,
 				A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */,
 				A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */,
 				A54EB02424BC9192001D0608 /* MensUniversalGoodsViewController.swift in Sources */,
+				A54EB02F24BCDAF8001D0608 /* UniversalGoodsViewController.swift in Sources */,
 				A551013C24BA3B33009A0F8C /* MensJeansViewController.swift in Sources */,
 				A550286424A0E1F700774E0E /* SceneDelegate.swift in Sources */,
 				A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */,

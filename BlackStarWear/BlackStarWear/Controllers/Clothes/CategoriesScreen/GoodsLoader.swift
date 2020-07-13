@@ -67,12 +67,14 @@ enum Рисунок: String, Codable {
     case животные = " животные"
     case орнамент = "орнамент"
     case животныеНадпись = " животные; надпись"
+    case надписьГерб = " надпись; герб"
 }
 
 enum Сезон: String, Codable {
     case круглогодичный = "круглогодичный"
     case демисезон = "демисезон"
     case лето = "лето"
+    case зима = "зима"
 }
 
 enum Состав: String, Codable {
@@ -83,10 +85,16 @@ enum Состав: String, Codable {
     case the100полиэстер = "100%  полиэстер"
     case the100полиэстер2 = "100% полиэстер"
     case the60Хлопок40Полиэстер = "60% хлопок; 40% полиэстер"
+    case the80хлопок20полиэстер = "80%  хлопок; 20% полиэстер"
+    case the65хлопок35полиэстер = "65% хлопок; 35% полиэстер"
+    case хлопок8020Полиэстер = "80% хлопок, 20% полиэстер"
+    case the95хлопок5эластан = "95% хлопок; 5% эластан"
+    case the50хлопок50эластан = "50% хлопок; 50% эластан"
 }
 
 enum СтранаПроизводителя: String, Codable {
     case россия = "Россия"
+    case китай = "Китай"
 }
 
 enum УходЗаВещами: String, Codable {
@@ -106,6 +114,11 @@ enum ColorImageURL: String, Codable {
     case imageCatalogStyleColorKhakic3b091JPG = "image/catalog/style/color/khaki_c3b091.jpg"
     case imageCatalogStyleColorOrangeffa500PNG = "image/catalog/style/color/orange-ffa500.png"
     case imageCatalogStyleColorBlackRed000000 = "image/catalog/style/color/black_red_000000.jpg"
+    case imageCatalogStyleColorLightPinkJPG = "image/catalog/style/color/lightpink.jpg"
+    case imageCatalogStyleColorBeigeF5F5DCJPG = "image/catalog/style/color/beige_F5F5DC.jpg"
+    case imageCatalogStyleColorGrayMelangeDbd6dcJPG = "image/catalog/style/color/gray_melange_dbd6dc.jpg"
+    case imageCatalogStyleColorLime00ff00PNG = "image/catalog/style/color/lime_00ff00.png"
+    case imageCatalogStyleColorYellowFFFF00JPG = "image/catalog/style/color/yellow_ffff00.jpg"
 }
 
 enum ColorName: String, Codable {
@@ -126,6 +139,14 @@ enum ColorName: String, Codable {
     case темныйХаки = "Тёмный хаки"
     case оранжевый = "Оранжевый"
     case черныйКрасный = "Черный/Красный"
+    case антрацитМеланж = "Антрацит меланж"
+    case розовый = "Розовый"
+    case бежевый = "Бежевый"
+    case серыйМеланж = "Серый меланж"
+    case лаймовый = "Лаймовый"
+    case темноЗеленый = "Темно-зеленый"
+    case изумрудный = "Изумрудный"
+    case желтый = "Желтый"
 }
 
 // MARK: - Offer
@@ -143,6 +164,7 @@ enum Size: String, Codable {
     case xxl = "XXL"
     case xxs = "XXS"
     case xxxl = "XXXL"
+    case xxxs = "XXXS"
     case единыйразмер = "Единый размер"
 }
 

@@ -18,6 +18,7 @@ class WomensSubcategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
 //        loadCategories() {
@@ -43,6 +44,78 @@ class WomensSubcategoriesViewController: UIViewController {
                 self.sortedWomensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
 //        }
+    }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Tracksuit" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Спортивные костюмы"
+        }
+        if segue.identifier == "T-shirt" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Футболки и майки"
+        }
+        if segue.identifier == "Hoodie" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Толстовки и худи"
+        }
+        if segue.identifier == "Dress" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Платья"
+        }
+        if segue.identifier == "Shirt" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Рубашки"
+        }
+        if segue.identifier == "Jacket" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Куртки и бомберы"
+        }
+        if segue.identifier == "Shorts" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Шорты"
+        }
+        if segue.identifier == "Pants" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Брюки и леггинсы"
+        }
+        if segue.identifier == "Skirt" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Юбки"
+        }
+        if segue.identifier == "Underwear" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Нижнее белье"
+        }
+        if segue.identifier == "Pyjamas" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Пижамы"
+        }
+        if segue.identifier == "AllGoods" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Все товары категории"
+        }
     }
     
 }
@@ -119,6 +192,54 @@ extension WomensSubcategoriesViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let data = 57
+            performSegue(withIdentifier: "Tracksuit", sender: data)
+        }
+        if indexPath.row == 1 {
+            let data = 53
+            performSegue(withIdentifier: "T-shirt", sender: data)
+        }
+        if indexPath.row == 2 {
+            let data = 58
+            performSegue(withIdentifier: "Hoodie", sender: data)
+        }
+        if indexPath.row == 3 {
+            let data = 54
+            performSegue(withIdentifier: "Dress", sender: data)
+        }
+        if indexPath.row == 4 {
+            let data = 55
+            performSegue(withIdentifier: "Shirt", sender: data)
+        }
+        if indexPath.row == 5 {
+            let data = 48
+            performSegue(withIdentifier: "Jacket", sender: data)
+        }
+        if indexPath.row == 6 {
+            let data = 44
+            performSegue(withIdentifier: "Shorts", sender: data)
+        }
+        if indexPath.row == 7 {
+            let data = 46
+            performSegue(withIdentifier: "Pants", sender: data)
+        }
+        if indexPath.row == 8 {
+            let data = 45
+            performSegue(withIdentifier: "Skirt", sender: data)
+        }
+        if indexPath.row == 9 {
+            let data = 134
+            performSegue(withIdentifier: "Underwear", sender: data)
+        }
+        if indexPath.row == 10 {
+            let data = 315
+            performSegue(withIdentifier: "Pyjamas", sender: data)
+        }
+        if indexPath.row == 11 {
+            let data = 68
+            performSegue(withIdentifier: "AllGoods", sender: data)
+        }
     }
     
 }
