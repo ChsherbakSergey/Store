@@ -121,7 +121,7 @@ class DetailMensTshirtViewController: UIViewController {
 
 extension DetailMensTshirtViewController: MensTshirtDetailPopUpViewControllerDelegate {
     
-    func didTapSize(size: String) {
+    func didChooseMensTshirtSize(size: String) {
         chooseSizeButtonOutlet.setTitle("Размер: " + size, for: .normal)
     }
     

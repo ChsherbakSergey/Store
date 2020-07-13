@@ -23,6 +23,11 @@
 		A54E24DB24B758C300158BDE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DA24B758C300158BDE /* ImageLoader.swift */; };
 		A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DC24B758D000158BDE /* OrderingArray.swift */; };
 		A54E24DF24B7645200158BDE /* DetailMensTracksuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */; };
+		A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */; };
+		A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */; };
+		A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */; };
+		A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */; };
+		A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */; };
 		A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E424B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift */; };
 		A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E624B86A0500567AF8 /* ChildrenSubcategoryViewController.swift */; };
 		A54F25EA24B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E924B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift */; };
@@ -81,6 +86,11 @@
 		A54E24DA24B758C300158BDE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		A54E24DC24B758D000158BDE /* OrderingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingArray.swift; sourceTree = "<group>"; };
 		A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTracksuitViewController.swift; sourceTree = "<group>"; };
+		A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieDetailPopUpViewController.swift; sourceTree = "<group>"; };
+		A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodiePopUpTableViewCell.swift; sourceTree = "<group>"; };
+		A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsViewController.swift; sourceTree = "<group>"; };
+		A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensHoodieViewController.swift; sourceTree = "<group>"; };
 		A54F25E424B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A54F25E624B86A0500567AF8 /* ChildrenSubcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenSubcategoryViewController.swift; sourceTree = "<group>"; };
 		A54F25E924B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcsessoriesSubcategoriesViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 		A54B312224B0E153003E5D88 /* Men's subcategories screen */ = {
 			isa = PBXGroup;
 			children = (
+				A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */,
 				A551013A24BA3B07009A0F8C /* Men's Jeans Screen */,
 				A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */,
 				A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */,
@@ -195,6 +206,18 @@
 				A54E24DC24B758D000158BDE /* OrderingArray.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */,
+				A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */,
+				A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */,
+				A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */,
+				A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */,
+			);
+			path = "Men's Hoodie Screen";
 			sourceTree = "<group>";
 		};
 		A54F25E324B8674600567AF8 /* Children's subcategories screen */ = {
@@ -483,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */,
 				A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */,
 				A54AAE4924B90C7A007EB792 /* MensTshirtGoodsViewController.swift in Sources */,
 				A54F25EF24B8982700567AF8 /* CollectionsSubcategoriesTableViewCell.swift in Sources */,
@@ -504,12 +528,14 @@
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
+				A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
 				A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */,
 				A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
 				A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */,
 				A550287624A0F78E00774E0E /* TabBarController.swift in Sources */,
+				A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */,
 				A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */,
 				A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */,
 				A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */,
@@ -523,6 +549,8 @@
 				A54E24DB24B758C300158BDE /* ImageLoader.swift in Sources */,
 				A54AAE4B24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift in Sources */,
 				A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */,
+				A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */,
+				A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */,
 				A550288624A10B8A00774E0E /* HomeViewController.swift in Sources */,
 				A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */,
 				A54B312B24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift in Sources */,

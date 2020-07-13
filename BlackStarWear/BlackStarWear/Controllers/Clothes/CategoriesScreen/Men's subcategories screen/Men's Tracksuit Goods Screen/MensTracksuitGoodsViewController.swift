@@ -77,24 +77,9 @@ class MensTracksuitGoodsViewController: UIViewController {
 extension MensTracksuitGoodsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = collectionView.frame.size.width / 2
-//        let width = UIScreen.main.bounds.size.width / 2
-//        let height = UIScreen.main.bounds.size.height / 3
-//        let height = width * 1.54
-//        return CGSize(width: width, height: height)
-        if indexPath.row == 0 {
-            let width = UIScreen.main.bounds.size.width / 2
-            let height = width * 1.52
-            return CGSize(width: width, height: height)
-        } else if indexPath.row == 1 {
-            let width = UIScreen.main.bounds.size.width / 2
-            let height = width * 1.52
-            return CGSize(width: width, height: height)
-        } else {
-            let width = UIScreen.main.bounds.size.width / 2
-            let height = width * 1.54
-            return CGSize(width: width, height: height)
-        }
+        let width = UIScreen.main.bounds.size.width / 2
+        let height = width * 1.57
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
