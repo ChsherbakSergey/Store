@@ -38,33 +38,58 @@ class DetailMensTracksuitViewController: UIViewController {
     
     @IBOutlet weak var menDetailTracksuitDescriptionLabel: UILabel!
     
+    @IBOutlet weak var chooseSizeButtonOutlet: UIButton!
+    
+    
+    var objects: GoodsValue?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        setImage(from: "https://blackstarshop.ru/" + "\(tracksuitData[2])")
+        setImage(from: "https://blackstarshop.ru/" + "\(objects!.mainImage)")
     }
     
     func setUI() {
-        menDetailTracksuitNameLabel.text = tracksuitData[0]
-        menDetailTracksuitPriceLabel.text = String(tracksuitData[1].dropLast(5)) + " руб."
-        menDetailTracksuitColorLabel.text = tracksuitData[3]
-        if tracksuitData[3] == "Черный" {
-            menDetailTracksuitColorImageView.backgroundColor = UIColor.black
-        } else if tracksuitData[3] == "Красный" || tracksuitData[3] == "Бордовый" {
-            menDetailTracksuitColorImageView.backgroundColor = UIColor.red
-        } else if tracksuitData[3] == "Черный/Золотой" {
-            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemYellow
-        }
-
+        menDetailTracksuitPriceLabel.text = String(objects?.price.dropLast(5) ?? "0") + " руб."
+        menDetailTracksuitNameLabel.text = objects?.name
+        menDetailTracksuitColorLabel.text = objects?.colorName.rawValue
         menDetailTracksuitColorImageView.layer.cornerRadius = menDetailTracksuitColorImageView.frame.size.height / 2
-        menDetailTracksuitArticulLabel.text = tracksuitData[4]
-        menDetailTracksuitDecorativeElementLabel.text = tracksuitData[5]
-        menDetailTracksuitDrawingLabel.text = tracksuitData[6]
-        menDetailTracksuitSesonLabel.text = tracksuitData[7]
-        menDetailTracksuitCompositionLabel.text = tracksuitData[8]
-        menDetailTracksuitMadeInLabel.text = tracksuitData[9]
-        menDetailTracksuitLookAfterLabel.text = tracksuitData[10]
-        menDetailTracksuitDescriptionLabel.text = tracksuitData[11]
+        menDetailTracksuitColorImageView.layer.borderColor = UIColor.black.cgColor
+        menDetailTracksuitColorImageView.layer.borderWidth = 1
+        if objects?.colorName.rawValue == "Фиолетовый" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.purple
+        } else if objects?.colorName.rawValue == "Чайная роза" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemPink
+        } else if objects?.colorName.rawValue == "Бордовый" || objects?.colorName.rawValue == "Красный" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.red
+        } else if objects?.colorName.rawValue == "Черный" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.black
+        } else if objects?.colorName.rawValue == "Черный/Золотой" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemYellow
+        } else if objects?.colorName.rawValue == "Темно-синий" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemIndigo
+        } else if objects?.colorName.rawValue == "Белый" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.white
+            menDetailTracksuitColorImageView.layer.borderColor = UIColor.black.cgColor
+            menDetailTracksuitColorImageView.layer.borderWidth = 1
+        } else if objects?.colorName.rawValue == "Серый" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.lightGray
+        } else if objects?.colorName.rawValue == "Белый/Серый" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemGray6
+        } else if objects?.colorName.rawValue == "Серый/Черный" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.systemGray
+        } else if objects?.colorName.rawValue == "Серый/Терракот" {
+            menDetailTracksuitColorImageView.backgroundColor = UIColor.brown
+        }
+        
+        menDetailTracksuitArticulLabel.text = objects?.article
+        menDetailTracksuitDecorativeElementLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
+        menDetailTracksuitDrawingLabel.text = objects?.attributes[1].рисунок?.rawValue ?? "Не указано"
+        menDetailTracksuitSesonLabel.text = objects?.attributes[2].сезон?.rawValue ?? "Не указано"
+        menDetailTracksuitCompositionLabel.text = objects?.attributes[3].состав?.rawValue ?? "Не указано"
+        menDetailTracksuitMadeInLabel.text = objects?.attributes[4].странаПроизводителя?.rawValue ?? "Не указано"
+        menDetailTracksuitLookAfterLabel.text = objects?.attributes[4].уходЗаВещами?.rawValue ?? "Не указано"
+        menDetailTracksuitDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
     }
 
     func setImage(from url: String) {
@@ -80,7 +105,28 @@ class DetailMensTracksuitViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func chooseSizeButton(_ sender: Any) {
+        let object = self.objects
+        performSegue(withIdentifier: "PopUp", sender: object)
+    }
+    
 
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "PopUp" {
+            let destVC = segue.destination as! DetailMensTracksuitPopUpViewController
+            destVC.objects = sender as? GoodsValue
+            destVC.sizeDelegate = self
+        }
+    }
+}
+
+extension DetailMensTracksuitViewController: DetailMensTracksuitPopUpViewControllerDelegate {
+    
+    func didChooseMensTracksuitSize(size: String) {
+        chooseSizeButtonOutlet.setTitle("Размер: " + size, for: .normal)
+    }
     
 }

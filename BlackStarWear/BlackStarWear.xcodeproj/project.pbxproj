@@ -25,6 +25,7 @@
 		A54E24DF24B7645200158BDE /* DetailMensTracksuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */; };
 		A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */; };
 		A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */; };
+		A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */; };
 		A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */; };
 		A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */; };
 		A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */; };
@@ -88,6 +89,7 @@
 		A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTracksuitViewController.swift; sourceTree = "<group>"; };
 		A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieDetailPopUpViewController.swift; sourceTree = "<group>"; };
 		A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodiePopUpTableViewCell.swift; sourceTree = "<group>"; };
+		A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTracksuitDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsViewController.swift; sourceTree = "<group>"; };
 		A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensHoodieViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */,
 				A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */,
 				A55E6C4D24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift */,
+				A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */,
 			);
 			path = "Men's Tracksuit Goods Screen";
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */,
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
+				A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
 				A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
