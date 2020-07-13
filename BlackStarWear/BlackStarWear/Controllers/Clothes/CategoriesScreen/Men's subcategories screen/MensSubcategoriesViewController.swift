@@ -51,6 +51,31 @@ class MensSubcategoriesViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Jacket" {
+            let destVC = segue.destination as! MensUniversalGoodsViewController
+            destVC.id = sender as? Int
+        }
+        if segue.identifier == "Pants" {
+            let destVC = segue.destination as! MensUniversalGoodsViewController
+            destVC.id = sender as? Int
+        }
+        if segue.identifier == "Shorts" {
+            let destVC = segue.destination as! MensUniversalGoodsViewController
+            destVC.id = sender as? Int
+        }
+        if segue.identifier == "Pyjamas" {
+            let destVC = segue.destination as! MensUniversalGoodsViewController
+            destVC.id = sender as? Int
+        }
+        if segue.identifier == "AllGoods" {
+            let destVC = segue.destination as! MensUniversalGoodsViewController
+            destVC.id = sender as? Int
+        }
+    }
+    
 }
 
 func sortedArray(array: [String], string: String) -> [String] {
@@ -119,5 +144,25 @@ extension MensSubcategoriesViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 4 {
+            let data = 38
+            performSegue(withIdentifier: "Jacket", sender: data)
+        }
+        if indexPath.row == 5 {
+            let data = 36
+            performSegue(withIdentifier: "Pants", sender: data)
+        }
+        if indexPath.row == 6 {
+            let data = 172
+            performSegue(withIdentifier: "Shorts", sender: data)
+        }
+        if indexPath.row == 7 {
+            let data = 314
+            performSegue(withIdentifier: "Pyjamas", sender: data)
+        }
+        if indexPath.row == 8 {
+            let data = 69
+            performSegue(withIdentifier: "AllGoods", sender: data)
+        }
     }
 }

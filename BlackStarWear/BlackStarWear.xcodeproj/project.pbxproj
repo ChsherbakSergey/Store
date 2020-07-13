@@ -26,6 +26,8 @@
 		A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */; };
 		A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */; };
 		A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */; };
+		A54EB02424BC9192001D0608 /* MensUniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */; };
+		A54EB02624BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */; };
 		A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */; };
 		A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */; };
 		A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */; };
@@ -90,6 +92,8 @@
 		A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieDetailPopUpViewController.swift; sourceTree = "<group>"; };
 		A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodiePopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTracksuitDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
+		A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalGoodsViewController.swift; sourceTree = "<group>"; };
+		A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsViewController.swift; sourceTree = "<group>"; };
 		A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensHoodieViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		A54B312224B0E153003E5D88 /* Men's subcategories screen */ = {
 			isa = PBXGroup;
 			children = (
+				A54EB02224BC9022001D0608 /* Universal Goods Screen */,
 				A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */,
 				A551013A24BA3B07009A0F8C /* Men's Jeans Screen */,
 				A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */,
@@ -209,6 +214,15 @@
 				A54E24DC24B758D000158BDE /* OrderingArray.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A54EB02224BC9022001D0608 /* Universal Goods Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */,
+				A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */,
+			);
+			path = "Universal Goods Screen";
 			sourceTree = "<group>";
 		};
 		A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */ = {
@@ -543,9 +557,11 @@
 				A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */,
 				A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */,
 				A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */,
+				A54EB02624BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift in Sources */,
 				A54F25EA24B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift in Sources */,
 				A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */,
 				A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */,
+				A54EB02424BC9192001D0608 /* MensUniversalGoodsViewController.swift in Sources */,
 				A551013C24BA3B33009A0F8C /* MensJeansViewController.swift in Sources */,
 				A550286424A0E1F700774E0E /* SceneDelegate.swift in Sources */,
 				A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */,
