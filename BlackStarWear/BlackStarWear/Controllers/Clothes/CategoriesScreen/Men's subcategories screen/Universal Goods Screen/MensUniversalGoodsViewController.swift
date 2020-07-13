@@ -13,11 +13,13 @@ class MensUniversalGoodsViewController: UIViewController {
     var objects: [GoodsValue] = []
     var universalNameArray: [String] = []
     var id: Int?
+    var titleOfNavigationBar: String?
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
         loadGoods(goodsID: id!) {
@@ -40,9 +42,16 @@ class MensUniversalGoodsViewController: UIViewController {
         title: "Назад", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
         navigationItem.backBarButtonItem?.tintColor = UIColor.black
-//        title = "Толстовки и худи"
+        title = titleOfNavigationBar
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "ToDetail" {
+            let destVC = segue.destination as! MensDetailUniversalGoodsViewController
+            destVC.objects = sender as? GoodsValue
+        }
+    }
 
 }
 
@@ -69,9 +78,9 @@ extension MensUniversalGoodsViewController: UICollectionViewDelegateFlowLayout, 
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let object = self.objects[indexPath.item]
-//        performSegue(withIdentifier: "ToDetail", sender: object)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let object = self.objects[indexPath.item]
+        performSegue(withIdentifier: "ToDetail", sender: object)
+    }
     
 }

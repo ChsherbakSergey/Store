@@ -18,6 +18,11 @@ class MensSubcategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
         //Set BackBarButtonItem title
         navigationItem.backBarButtonItem = UIBarButtonItem(
         title: "Назад", style: .plain, target: nil, action: nil)
@@ -27,7 +32,7 @@ class MensSubcategoriesViewController: UIViewController {
         //Delegates
         tableView.delegate = self
         tableView.dataSource = self
-        loadCategories() {
+//        loadCategories() {
             if let categories = listOfCategories {
                 let array = Array(categories.values)
                 array.forEach { (value) in
@@ -35,7 +40,6 @@ class MensSubcategoriesViewController: UIViewController {
                         return
                     } else if Int(value.sortOrder) == 0 && value.subcategories.count != 0 {
                         self.subcategoriesNamesArray.append(contentsOf: value.subcategories)
-//                        print(self.subcategoriesNamesArray.count)
                         for i in 0...self.subcategoriesNamesArray.count - 1 {
                             self.arrayOfMenSubcategories.append(self.subcategoriesNamesArray[i].name)
                         }
@@ -49,7 +53,7 @@ class MensSubcategoriesViewController: UIViewController {
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedMensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
-        }
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,22 +61,27 @@ class MensSubcategoriesViewController: UIViewController {
         if segue.identifier == "Jacket" {
             let destVC = segue.destination as! MensUniversalGoodsViewController
             destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Куртки и бомберы"
         }
         if segue.identifier == "Pants" {
             let destVC = segue.destination as! MensUniversalGoodsViewController
             destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Брюки"
         }
         if segue.identifier == "Shorts" {
             let destVC = segue.destination as! MensUniversalGoodsViewController
             destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Шорты"
         }
         if segue.identifier == "Pyjamas" {
             let destVC = segue.destination as! MensUniversalGoodsViewController
             destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Пижамы"
         }
         if segue.identifier == "AllGoods" {
             let destVC = segue.destination as! MensUniversalGoodsViewController
             destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Все товары категории"
         }
     }
     

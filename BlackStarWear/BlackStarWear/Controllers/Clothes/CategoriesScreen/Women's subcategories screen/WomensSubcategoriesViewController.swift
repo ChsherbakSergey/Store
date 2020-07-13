@@ -20,7 +20,7 @@ class WomensSubcategoriesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        loadCategories() {
+//        loadCategories() {
             if let categories = listOfCategories {
                 let array = Array(categories.values)
                 array.forEach { (value) in
@@ -42,7 +42,7 @@ class WomensSubcategoriesViewController: UIViewController {
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedWomensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
-        }
+//        }
     }
     
 }

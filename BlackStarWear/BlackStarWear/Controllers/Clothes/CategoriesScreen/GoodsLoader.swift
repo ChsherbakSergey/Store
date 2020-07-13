@@ -55,6 +55,7 @@ enum ДекоративныйЭлемент: String, Codable {
     case нашивка = "нашивка"
     case принт = "принт"
     case принтнашивка = "принт; нашивка"
+    case принтованноеПолотно = "принтованное полотно"
 }
 
 enum Рисунок: String, Codable {
@@ -65,10 +66,13 @@ enum Рисунок: String, Codable {
     case звезда = "звезда"
     case животные = " животные"
     case орнамент = "орнамент"
+    case животныеНадпись = " животные; надпись"
 }
 
 enum Сезон: String, Codable {
     case круглогодичный = "круглогодичный"
+    case демисезон = "демисезон"
+    case лето = "лето"
 }
 
 enum Состав: String, Codable {
@@ -77,6 +81,8 @@ enum Состав: String, Codable {
     case the80Хлопок20Эластан = "80% хлопок; 20% эластан"
     case хлопок = "100%  хлопок"
     case the100полиэстер = "100%  полиэстер"
+    case the100полиэстер2 = "100% полиэстер"
+    case the60Хлопок40Полиэстер = "60% хлопок; 40% полиэстер"
 }
 
 enum СтранаПроизводителя: String, Codable {
@@ -96,6 +102,10 @@ enum ColorImageURL: String, Codable {
     case imageCatalogStyleColorWhiteGif = "image/catalog/style/color/white.gif"
     case imageCatalogStyleColorGrey838383Jpg = "image/catalog/style/color/grey_838383.jpg"
     case imageCatalogStyleColorPurpleJpg = "image/catalog/style/color/purple.jpg"
+    case imageCatalogStyleColorCamouflageJPG = "image/catalog/style/color/camouflage.jpg"
+    case imageCatalogStyleColorKhakic3b091JPG = "image/catalog/style/color/khaki_c3b091.jpg"
+    case imageCatalogStyleColorOrangeffa500PNG = "image/catalog/style/color/orange-ffa500.png"
+    case imageCatalogStyleColorBlackRed000000 = "image/catalog/style/color/black_red_000000.jpg"
 }
 
 enum ColorName: String, Codable {
@@ -111,6 +121,11 @@ enum ColorName: String, Codable {
     case белыйСерый = "Белый/Серый"
     case серыйЧерный = "Серый/Черный"
     case серыйТерракот = "Серый/Терракот"
+    case камуфляж = "Камуфляж"
+    case хаки = "Хаки"
+    case темныйХаки = "Тёмный хаки"
+    case оранжевый = "Оранжевый"
+    case черныйКрасный = "Черный/Красный"
 }
 
 // MARK: - Offer
