@@ -18,6 +18,7 @@ class ChildrenSubcategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
 //        loadCategories() {
@@ -44,6 +45,51 @@ class ChildrenSubcategoryViewController: UIViewController {
             }
 //        }
     }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Tracksuit" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Спортивные костюмы"
+        }
+        if segue.identifier == "T-ShirtAndDress" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Футболки и платья"
+        }
+        if segue.identifier == "Hoodie" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Толстовки"
+        }
+        if segue.identifier == "Jacket" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Куртки и бомберы"
+        }
+        if segue.identifier == "Pants" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Брюки и леггинсы"
+        }
+        if segue.identifier == "Shorts" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Шорты"
+        }
+    }
+    
+    
+    
 }
 
 extension ChildrenSubcategoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,6 +134,30 @@ extension ChildrenSubcategoryViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let data = 181
+            performSegue(withIdentifier: "Tracksuit", sender: data)
+        }
+        if indexPath.row == 1 {
+            let data = 180
+            performSegue(withIdentifier: "T-ShirtAndDress", sender: data)
+        }
+        if indexPath.row == 2 {
+            let data = 179
+            performSegue(withIdentifier: "Hoodie", sender: data)
+        }
+        if indexPath.row == 3 {
+            let data = 177
+            performSegue(withIdentifier: "Jacket", sender: data)
+        }
+        if indexPath.row == 4 {
+            let data = 178
+            performSegue(withIdentifier: "Pants", sender: data)
+        }
+        if indexPath.row == 5 {
+            let data = 185
+            performSegue(withIdentifier: "Shorts", sender: data)
+        }
     }
     
 }

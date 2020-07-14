@@ -44,6 +44,14 @@ class UniversalGoodsViewController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = UIColor.black
         title = titleOfNavigationBar
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "ToDetail" {
+            let destVC = segue.destination as! UniversalDetailGoodsViewController
+            destVC.objects = sender as? GoodsValue
+        }
+    }
 
 }
 
@@ -69,9 +77,9 @@ extension UniversalGoodsViewController: UICollectionViewDelegateFlowLayout, UICo
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let object = self.objects[indexPath.item]
-//        performSegue(withIdentifier: "ToDetail", sender: object)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let object = self.objects[indexPath.item]
+        performSegue(withIdentifier: "ToDetail", sender: object)
+    }
     
 }

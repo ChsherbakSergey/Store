@@ -50,6 +50,8 @@ struct Attribute: Codable {
     }
 }
 
+//if title == "Чехлы на телефон" -> madeInLabel.text == "Тип Чехлов"
+
 enum ДекоративныйЭлемент: String, Codable {
     case вышивка = "вышивка"
     case нашивка = "нашивка"
@@ -65,9 +67,11 @@ enum Рисунок: String, Codable {
     case надпись = " надпись"
     case звезда = "звезда"
     case животные = " животные"
+    case животные2 = "животные"
     case орнамент = "орнамент"
     case животныеНадпись = " животные; надпись"
     case надписьГерб = " надпись; герб"
+    case сюжет = "сюжет"
 }
 
 enum Сезон: String, Codable {
@@ -90,6 +94,8 @@ enum Состав: String, Codable {
     case хлопок8020Полиэстер = "80% хлопок, 20% полиэстер"
     case the95хлопок5эластан = "95% хлопок; 5% эластан"
     case the50хлопок50эластан = "50% хлопок; 50% эластан"
+    case хлопок8020полиэстер = "80% хлопок; 20%  полиэстер"
+    case the90хлопок10эластан = "90% хлопок; 10% эластан"
 }
 
 enum СтранаПроизводителя: String, Codable {
@@ -119,6 +125,8 @@ enum ColorImageURL: String, Codable {
     case imageCatalogStyleColorGrayMelangeDbd6dcJPG = "image/catalog/style/color/gray_melange_dbd6dc.jpg"
     case imageCatalogStyleColorLime00ff00PNG = "image/catalog/style/color/lime_00ff00.png"
     case imageCatalogStyleColorYellowFFFF00JPG = "image/catalog/style/color/yellow_ffff00.jpg"
+    case imageCatalogStyleColorBlackCamJPG = "image/catalog/style/color/black-cam.jpg"
+    case imageCatalogStyleColorDarkGrayMelange60606dJPG = "image/catalog/style/color/dark_gray_melange_60606d.jpg"
 }
 
 enum ColorName: String, Codable {
@@ -147,6 +155,10 @@ enum ColorName: String, Codable {
     case темноЗеленый = "Темно-зеленый"
     case изумрудный = "Изумрудный"
     case желтый = "Желтый"
+    case сиреневый = "Сиреневый"
+    case черныйКамуфляж = "Черный/Камуфляж"
+    case серыйСиний = "Серый/Синий"
+    case темноСерый = "Темно-серый"
 }
 
 // MARK: - Offer
@@ -166,6 +178,15 @@ enum Size: String, Codable {
     case xxxl = "XXXL"
     case xxxs = "XXXS"
     case единыйразмер = "Единый размер"
+    case threeYears = "3 года"
+    case fourYears = "4 года"
+    case sixYears = "6 лет"
+    case sevenYears = "7 лет"
+    case eightYears = "8 лет"
+    case fiveYears = "5 лет"
+    case oneToTwoYears = "1-2 лет"
+    case nineToTenYears = "9-10 лет"
+    case elevenToTwelveYears = "11-12 лет"
 }
 
 // MARK: - ProductImage

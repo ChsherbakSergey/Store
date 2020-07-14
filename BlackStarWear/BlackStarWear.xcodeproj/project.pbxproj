@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53BD55724BE247E0002182A /* UniversalDetailGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BD55624BE247E0002182A /* UniversalDetailGoodsViewController.swift */; };
+		A53BD55924BE31870002182A /* UniversalDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BD55824BE31870002182A /* UniversalDetailPopUpViewController.swift */; };
+		A53BD55B24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BD55A24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift */; };
 		A54AAE3E24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE3D24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift */; };
 		A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */; };
 		A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */; };
@@ -78,6 +81,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53BD55624BE247E0002182A /* UniversalDetailGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalDetailGoodsViewController.swift; sourceTree = "<group>"; };
+		A53BD55824BE31870002182A /* UniversalDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalDetailPopUpViewController.swift; sourceTree = "<group>"; };
+		A53BD55A24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE3D24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsSubcategoriesViewController.swift; sourceTree = "<group>"; };
 		A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +249,9 @@
 			children = (
 				A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */,
 				A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */,
+				A53BD55624BE247E0002182A /* UniversalDetailGoodsViewController.swift */,
+				A53BD55824BE31870002182A /* UniversalDetailPopUpViewController.swift */,
+				A53BD55A24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift */,
 			);
 			path = "Universal Goods Screen";
 			sourceTree = "<group>";
@@ -571,11 +580,14 @@
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
 				A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
+				A53BD55B24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift in Sources */,
 				A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */,
+				A53BD55924BE31870002182A /* UniversalDetailPopUpViewController.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
 				A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */,
 				A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
+				A53BD55724BE247E0002182A /* UniversalDetailGoodsViewController.swift in Sources */,
 				A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */,
 				A550287624A0F78E00774E0E /* TabBarController.swift in Sources */,
 				A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */,
