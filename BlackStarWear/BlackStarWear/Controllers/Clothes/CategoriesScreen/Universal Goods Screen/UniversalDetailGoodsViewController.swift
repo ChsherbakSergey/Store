@@ -53,6 +53,7 @@ class UniversalDetailGoodsViewController: UIViewController {
     @IBOutlet weak var chooseSizeButtonOutlet: UIButton!
     
     var objects: GoodsValue?
+    var checkForItem: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,14 +110,50 @@ class UniversalDetailGoodsViewController: UIViewController {
             universalColorImageView.backgroundColor = UIColor.systemRed
         }
         
-        universalArticulTextLabel.text = objects?.article
-        universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
-        universalDrawingTextLabel.text = objects?.attributes[1].рисунок?.rawValue ?? "Не указано"
-        universalSesonTextLabel.text = objects?.attributes[2].сезон?.rawValue ?? "Не указано"
-        universalCompositionTextLabel.text = objects?.attributes[3].состав?.rawValue ?? "Не указано"
-        universalMadeInTextLabel.text = objects?.attributes[4].странаПроизводителя?.rawValue ?? "Не указано"
-        universalLookAfterTextLabel.text = objects?.attributes[4].уходЗаВещами?.rawValue ?? "Не указано"
-        universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
+        if checkForItem == "Ремни" {
+            universalArticulTextLabel.text = objects?.article
+            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
+            universalDrawingTextLabel.text = objects?.attributes[1].материал?.rawValue ?? "Не указано"
+            universalDrawingLabel.text = "Материал:"
+            universalSesonTextLabel.text = objects?.attributes[2].рисунок?.rawValue ?? "Не указано"
+            universalSesonLabel.text = "Рисунок:"
+            universalCompositionTextLabel.text = objects?.attributes[3].сезон?.rawValue ?? "Не указано"
+            universalCompositionLabel.text = "Сезон:"
+            universalMadeInTextLabel.text = objects?.attributes[4].странаПроизводителя?.rawValue ?? "Не указано"
+            universalLookAfterTextLabel.text = ""
+            universalLookAfterLabel.text = ""
+            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
+        } else if checkForItem == "Чехлы на телефоны" {
+            universalArticulTextLabel.text = objects?.article
+            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
+            universalDrawingTextLabel.text = objects?.attributes[1].материал?.rawValue ?? "Не указано"
+            universalDrawingLabel.text = "Материал:"
+            universalSesonTextLabel.text = objects?.attributes[2].рисунок?.rawValue ?? "Не указано"
+            universalSesonLabel.text = "Рисунок:"
+            universalCompositionTextLabel.text = objects?.attributes[2].странаПроизводителя?.rawValue ?? "Не указано"
+            universalCompositionLabel.text = "Страна производителя:"
+//            if objects?.attributes[4].типЧехлов?.rawValue.count == 0 {
+//                universalMadeInTextLabel.text = objects?.attributes[3].типЧехлов?.rawValue ?? "Не указано"
+//            } else {
+//                universalMadeInTextLabel.text = objects?.attributes[4].типЧехлов?.rawValue ?? "Не указано"
+//            }
+//            
+            universalMadeInLabel.text = "Тип чехла:"
+            universalLookAfterTextLabel.text = ""
+            universalLookAfterLabel.text = ""
+            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
+        } else {
+            universalArticulTextLabel.text = objects?.article
+            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
+            universalDrawingTextLabel.text = objects?.attributes[1].рисунок?.rawValue ?? "Не указано"
+            universalSesonTextLabel.text = objects?.attributes[2].сезон?.rawValue ?? "Не указано"
+            universalCompositionTextLabel.text = objects?.attributes[0].состав?.rawValue ?? "Не указано"
+            universalMadeInTextLabel.text = objects?.attributes[0].странаПроизводителя?.rawValue ?? "Не указано"
+            universalLookAfterTextLabel.text = objects?.attributes[0].уходЗаВещами?.rawValue ?? "Не указано"
+            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
+        }
+        
+        
     }
     
     func setImage(from url: String) {

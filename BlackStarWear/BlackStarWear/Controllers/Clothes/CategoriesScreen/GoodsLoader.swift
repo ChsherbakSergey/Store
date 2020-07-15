@@ -39,6 +39,8 @@ struct Attribute: Codable {
     let странаПроизводителя: СтранаПроизводителя?
     let уходЗаВещами: УходЗаВещами?
     let рисунок: Рисунок?
+    let материал: Материал?
+    let типЧехлов: ТипЧехлов?
 
     enum CodingKeys: String, CodingKey {
         case декоративныйЭлемент = "Декоративный элемент"
@@ -47,10 +49,39 @@ struct Attribute: Codable {
         case странаПроизводителя = "Страна производителя"
         case уходЗаВещами = "Уход за вещами"
         case рисунок = "Рисунок"
+        case материал = "Материал"
+        case типЧехлов = "Тип чехлов"
     }
 }
 
 //if title == "Чехлы на телефон" -> madeInLabel.text == "Тип Чехлов"
+
+enum ТипЧехлов: String, Codable {
+    case накладной = "накладной"
+}
+
+
+enum Материал: String, Codable {
+    case натуральнаяКожа = "100% натуральная кожа"
+    case ПВХ = "ПВХ"
+    case пвх = "пвх"
+    case силикон = "силикон"
+    case деревоПвх = "дерево, пвх"
+    case деревоПВХ = "дерево; ПВХ"
+    case текстиль = "текстиль"
+    case экокожа = "экокожа"
+    case текстильЭкокожа = "текстиль; экокожа"
+    case натуральныйКамень = "натуральный камень: черный - шунгит; зеленый - малахит; красный - майорка; коричневый - тигровый глаз; серый - яшма; белый - кахолонг; синий - содалит "
+    case нержавеющаяСталь = "нержавеющая сталь; гематит"
+    case шунгитАгатГематит = "шунгит; агат; гематит"
+    case лава100ГематитШунгит = "лава - 100%; гематит; шунгит"
+    case пластмасса = "пластмасса"
+    case керамика = "керамика"
+    case металл = "металл"
+    case бумага = "бумага"
+    case алюминиевыйСплав = "Алюминиевый сплав\r\nСостав: Алюминий - Al, Магний - Mg, Кремний - Si, Цинк -Zn, Марганец - Mn, ,Бериллий - Be."
+    case велюроваяТкань = "велюровая ткань"
+}
 
 enum ДекоративныйЭлемент: String, Codable {
     case вышивка = "вышивка"
@@ -58,6 +89,12 @@ enum ДекоративныйЭлемент: String, Codable {
     case принт = "принт"
     case принтнашивка = "принт; нашивка"
     case принтованноеПолотно = "принтованное полотно"
+    case тиснение = "тиснение"
+    case print3D = "3D принт"
+    case безЭлементов = "без элементов"
+    case аппликация = "аппликация"
+    case звезда = "звезда"
+    case серыйЯшмаЧерныйОниксЦепьХирургическаяСталь = "серый - яшма; черный - оникс; цепь - хирургическая сталь"
 }
 
 enum Рисунок: String, Codable {
@@ -72,6 +109,9 @@ enum Рисунок: String, Codable {
     case животныеНадпись = " животные; надпись"
     case надписьГерб = " надпись; герб"
     case сюжет = "сюжет"
+    case номер = "номер"
+    case вышивка = "вышивка"
+    case цифры = "цифры"
 }
 
 enum Сезон: String, Codable {
@@ -79,6 +119,8 @@ enum Сезон: String, Codable {
     case демисезон = "демисезон"
     case лето = "лето"
     case зима = "зима"
+    case внесезон = "Всесезон"
+    case веснаЛето = "весна-лето"
 }
 
 enum Состав: String, Codable {
@@ -96,6 +138,11 @@ enum Состав: String, Codable {
     case the50хлопок50эластан = "50% хлопок; 50% эластан"
     case хлопок8020полиэстер = "80% хлопок; 20%  полиэстер"
     case the90хлопок10эластан = "90% хлопок; 10% эластан"
+    case ПВХ = "ПВХ"
+    case пвх = "пвх"
+    case хлопок88эластан10полиамид2 = "88% хлопок, 10% эластан, 2% полиамид"
+    case хлопок8015полиамидэластан5 = "80% хлопок, 15% полиамид, 5% эластан"
+    case пластмасса = "пластмасса"
 }
 
 enum СтранаПроизводителя: String, Codable {
@@ -127,6 +174,14 @@ enum ColorImageURL: String, Codable {
     case imageCatalogStyleColorYellowFFFF00JPG = "image/catalog/style/color/yellow_ffff00.jpg"
     case imageCatalogStyleColorBlackCamJPG = "image/catalog/style/color/black-cam.jpg"
     case imageCatalogStyleColorDarkGrayMelange60606dJPG = "image/catalog/style/color/dark_gray_melange_60606d.jpg"
+    case imageCatalogStyleColorBrown964b00JPG = "image/catalog/style/color/brown_964b00.jpg"
+    case imageCatalogStyleColorGoldJPG = "image/catalog/style/color/gold.jpg"
+    case imageCatalogStyleColorBlue000ffJPG = "image/catalog/style/color/blue_0000ff.jpg"
+    case imageCatalogStyleColorBlackWhite000fff = "image/catalog/style/color/black_white_000fff.jpg"
+    case imageCatalogStyleColorSerebroJPG = "image/catalog/style/color/serebro.jpg"
+    case imageCatalogStyleColorBlackGreyJPG = "image/catalog/style/color/black-grey.jpg"
+    case imageCatalogStyleColorGreen008000JPG = "image/catalog/style/color/green_008000.jpg"
+    case imageCatalogStyleColorPersikJPG = "image/catalog/style/color/persik.jpg"
 }
 
 enum ColorName: String, Codable {
@@ -159,6 +214,22 @@ enum ColorName: String, Codable {
     case черныйКамуфляж = "Черный/Камуфляж"
     case серыйСиний = "Серый/Синий"
     case темноСерый = "Темно-серый"
+    case прозрачный = "Прозрачный"
+    case черныйФиолетовый = "Черный/Фиолетовый"
+    case коричневый = "Коричневый"
+    case черныйСалатовый = "Черный/Салатовый"
+    case черныйЖелтый = "Черный/Желтый"
+    case золотой = "Золотой"
+    case черныйБирюзовый = "Черный/Бирюзовый"
+    case синий = "Синий"
+    case черныйБелый = "Черный/Белый"
+    case мультиколор = "Мультиколор"
+    case серебряный = "Серебряный"
+    case черныйСеребряный = "Черный/Серебряный"
+    case градиент = "Градиент"
+    case зеленый = "Зеленый"
+    case персиковый = "Персиковый"
+    case коричневыйГрадиент = "Коричневый градиент"
 }
 
 // MARK: - Offer
@@ -177,6 +248,8 @@ enum Size: String, Codable {
     case xxs = "XXS"
     case xxxl = "XXXL"
     case xxxs = "XXXS"
+    case lxl = "L/XL"
+    case sm = "S/M"
     case единыйразмер = "Единый размер"
     case threeYears = "3 года"
     case fourYears = "4 года"
@@ -187,6 +260,42 @@ enum Size: String, Codable {
     case oneToTwoYears = "1-2 лет"
     case nineToTenYears = "9-10 лет"
     case elevenToTwelveYears = "11-12 лет"
+    case threeToFourYears = "3-4"
+    case threeToFourYears2 = "3-4 лет"
+    case fourToFiveYears = "4-5 лет"
+    case sevenToNineYears = "7-9 лет"
+    case eightyFiveCM = "85 см"
+    case nintyFiveCM = "95 см"
+    case oneHundredAndFiveCM = "105 см"
+    case oneHundredAndFifteenCM = "115 см"
+    case oneHundredAndTwentyCM = "120 см"
+    case iphone10 = "X (10)/XS (10S)"
+    case iphoneSeven = "7"
+    case iphone7and8 = "7/8"
+    case iphone7and8plus = "7+/8+"
+    case iphoneEight = "8"
+    case iphone6 = "6"
+    case iphone6plus = "6+"
+    case xsmax = "XSMax (10SMax)"
+    case eleven = "11"
+    case elevenPro = "11 Pro"
+    case elevenProMax = "11 Pro MAX"
+    case iphoneXR = "XR"
+    case iphoneX10 = "X (10)"
+    case samsungS8plus = "SAMSUNG S8+"
+    case samsungS9 = "SAMSUNG S9"
+    case samsungS9plus = "SAMSUNG S9+"
+    case fortyOneToFortyThree = "41-43"
+    case thirtySixToThirtyEight = "36/38"
+    case thirtyNineToForty = "39/40"
+    case thirtyFiveToThirtySeven = "35/37"
+    case fortyOneToFortyTwo = "41/42"
+    case thirtyFiveToThirtySeven2 = "35-37"
+    case thirtyEightToForty = "38-40"
+    case thirtySevenToThirtyEight = "37/38"
+    case the21x15x5 = "21*15*5"
+    case the20x30x12 = "20*30*12"
+    case the50x36x16 = "50*36*16"
 }
 
 // MARK: - ProductImage

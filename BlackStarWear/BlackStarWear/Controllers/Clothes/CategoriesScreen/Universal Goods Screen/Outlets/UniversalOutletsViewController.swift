@@ -1,19 +1,19 @@
 //
-//  UniversalGoodsViewController.swift
+//  UniversalOutletsViewController.swift
 //  BlackStarWear
 //
-//  Created by Sergey on 7/13/20.
+//  Created by Sergey on 7/15/20.
 //  Copyright © 2020 Chsherbak Sergey. All rights reserved.
 //
 
 import UIKit
 
-class UniversalGoodsViewController: UIViewController {
+class UniversalOutletsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var objects: [GoodsValue] = []
-    var universalNameArray: [String] = []
+    var universalOutletsNameArray: [String] = []
     var id: Int?
     var titleOfNavigationBar: String?
     
@@ -27,7 +27,7 @@ class UniversalGoodsViewController: UIViewController {
                 let array = Array(goods.values)
                 array.forEach { (value) in
                     self.objects = array
-                    self.universalNameArray.append(value.name)
+                    self.universalOutletsNameArray.append(value.name)
                 }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
@@ -45,35 +45,35 @@ class UniversalGoodsViewController: UIViewController {
         title = titleOfNavigationBar
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if segue.identifier == "ToDetail" {
-            let destVC = segue.destination as! UniversalDetailGoodsViewController
-            destVC.objects = sender as? GoodsValue
-            destVC.checkForItem = titleOfNavigationBar
-        }
-    }
-
 }
 
-extension UniversalGoodsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension UniversalOutletsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width / 2
-        let height = width * 1.58
+        let height = width * 1.6
         return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        universalNameArray.count
+        universalOutletsNameArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let universalName = objects[indexPath.row].name
-        let universalPrice = objects[indexPath.row].price
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Universal", for: indexPath) as! UniversalGoodsCollectionViewCell
-        cell.universalPriceLabel.text = String(universalPrice.dropLast(5)) + " руб."
-        cell.universalNameLabel.text = universalName
+        let universalOutletsName = objects[indexPath.row].name
+        let universalOutletsPrice = objects[indexPath.row].price
+        let universalOutletsOldPrice = objects[indexPath.row].oldPrice
+        let universalOutletOldPriceStrikeThrough = String((universalOutletsOldPrice?.dropLast(5) ?? "1990")) + " руб."
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: universalOutletOldPriceStrikeThrough )
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
+        
+        
+        let universalTag = objects[indexPath.row].tag
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UniversalOutlets", for: indexPath) as! UniversalOutletsCollectionViewCell
+        cell.universalOutletsPriceLabel.text = String(universalOutletsPrice.dropLast(5)) + " руб."
+        cell.universalOutletsNameLabel.text = universalOutletsName
+        cell.universalOutletsOldPrice.attributedText = attributeString
+        cell.universalOutletsTagLabel.text = universalTag
         cell.setImage(from: "https://blackstarshop.ru/" + "\(objects[indexPath.row].mainImage)")
         return cell
     }

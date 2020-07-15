@@ -94,7 +94,6 @@ class MensDetailUniversalGoodsViewController: UIViewController {
         } else if objects?.colorName.rawValue == "Черный/Красный" {
             mensDetailUniversalColorImageView.backgroundColor = UIColor.systemRed
         }
-        
         mensDetailUniversalArticulLabel.text = objects?.article
         mensDetailUniversalDecorativeElementLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
         mensDetailUniversalDrawingLabel.text = objects?.attributes[1].рисунок?.rawValue ?? "Не указано"

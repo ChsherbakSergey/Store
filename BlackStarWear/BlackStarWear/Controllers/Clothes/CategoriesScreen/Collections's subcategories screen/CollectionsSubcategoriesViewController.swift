@@ -18,6 +18,7 @@ class CollectionsSubcategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
 //        loadCategories() {
@@ -43,6 +44,113 @@ class CollectionsSubcategoriesViewController: UIViewController {
                 self.sortedCollectionsSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
 //        }
+    }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Generation13" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Generation 13"
+        }
+        if segue.identifier == "GoldLion" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Gold Lion"
+        }
+        if segue.identifier == "Terminal13" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Terminal 13"
+        }
+        if segue.identifier == "KIDSID" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "KIDS ID"
+        }
+        if segue.identifier == "ArtSpray" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Art Spray"
+        }
+        if segue.identifier == "RUS" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "RUS"
+        }
+        if segue.identifier == "LUX" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "LUX"
+        }
+        if segue.identifier == "BBLINES" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "BBLINES"
+        }
+        if segue.identifier == "BlackStarMafia" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Коллекция Black Star Mafia"
+        }
+        if segue.identifier == "Wings" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Wings"
+        }
+        if segue.identifier == "BSWDesign" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "BSW Design"
+        }
+        if segue.identifier == "UNIT" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "UNIT"
+        }
+        if segue.identifier == "BSColor" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "BS Color"
+        }
+        if segue.identifier == "Calligraphy" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "CALLIGRAPHY"
+        }
+        if segue.identifier == "Пашу" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Пашу"
+        }
+        if segue.identifier == "Likee" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Likee"
+        }
+        if segue.identifier == "MOTMerch" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "MOT Merch"
+        }
+        if segue.identifier == "Natan" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Natan"
+        }
+        if segue.identifier == "AllGoods" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Все товары категории"
+        }
     }
 
 }
@@ -154,6 +262,82 @@ extension CollectionsSubcategoriesViewController: UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let data = 301
+            performSegue(withIdentifier: "Generation13", sender: data)
+        }
+        if indexPath.row == 1 {
+            let data = 302
+            performSegue(withIdentifier: "GoldLion", sender: data)
+        }
+        if indexPath.row == 2 {
+            let data = 303
+            performSegue(withIdentifier: "Terminal13", sender: data)
+        }
+        if indexPath.row == 3 {
+            let data = 304
+            performSegue(withIdentifier: "KIDSID", sender: data)
+        }
+        if indexPath.row == 4 {
+            let data = 305
+            performSegue(withIdentifier: "ArtSpray", sender: data)
+        }
+        if indexPath.row == 5 {
+            let data = 306
+            performSegue(withIdentifier: "RUS", sender: data)
+        }
+        if indexPath.row == 6 {
+            let data = 313
+            performSegue(withIdentifier: "LUX", sender: data)
+        }
+        if indexPath.row == 7 {
+            let data = 317
+            performSegue(withIdentifier: "BBLINES", sender: data)
+        }
+        if indexPath.row == 8 {
+            let data = 131
+            performSegue(withIdentifier: "BlackStarMafia", sender: data)
+        }
+        if indexPath.row == 9 {
+            let data = 300
+            performSegue(withIdentifier: "Wings", sender: data)
+        }
+        if indexPath.row == 10 {
+            let data = 316
+            performSegue(withIdentifier: "BSWDesign", sender: data)
+        }
+        if indexPath.row == 11 {
+            let data = 189
+            performSegue(withIdentifier: "UNIT", sender: data)
+        }
+        if indexPath.row == 12 {
+            let data = 318
+            performSegue(withIdentifier: "BSColor", sender: data)
+        }
+        if indexPath.row == 13 {
+            let data = 251
+            performSegue(withIdentifier: "Calligraphy", sender: data)
+        }
+        if indexPath.row == 14 {
+            let data = 298
+            performSegue(withIdentifier: "Пашу", sender: data)
+        }
+        if indexPath.row == 15 {
+            let data = 319
+            performSegue(withIdentifier: "Likee", sender: data)
+        }
+        if indexPath.row == 16 {
+            let data = 151
+            performSegue(withIdentifier: "MOTMerch", sender: data)
+        }
+        if indexPath.row == 17 {
+            let data = 241
+            performSegue(withIdentifier: "Natan", sender: data)
+        }
+        if indexPath.row == 18 {
+            let data = 68
+            performSegue(withIdentifier: "AllGoods", sender: data)
+        }
     }
     
 }

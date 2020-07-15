@@ -18,6 +18,7 @@ class OutletsSubcategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
 //        loadCategories() {
@@ -44,6 +45,40 @@ class OutletsSubcategoriesViewController: UIViewController {
             }
 //        }
     }
+    
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Men" {
+            let destVC = segue.destination as! UniversalOutletsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Для мужчин"
+        }
+        if segue.identifier == "Women" {
+            let destVC = segue.destination as! UniversalOutletsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Для женщин"
+        }
+        if segue.identifier == "Children" {
+            let destVC = segue.destination as! UniversalOutletsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Для детей"
+        }
+        if segue.identifier == "Accessories" {
+            let destVC = segue.destination as! UniversalOutletsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Аксессуары"
+        }
+    }
+    
+    
 }
 
 
@@ -79,6 +114,22 @@ extension OutletsSubcategoriesViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let data = 157
+            performSegue(withIdentifier: "Men", sender: data)
+        }
+        if indexPath.row == 1 {
+            let data = 158
+            performSegue(withIdentifier: "Women", sender: data)
+        }
+        if indexPath.row == 2 {
+            let data = 159
+            performSegue(withIdentifier: "Children", sender: data)
+        }
+        if indexPath.row == 3 {
+            let data = 160
+            performSegue(withIdentifier: "Accessories", sender: data)
+        }
     }
     
 }
