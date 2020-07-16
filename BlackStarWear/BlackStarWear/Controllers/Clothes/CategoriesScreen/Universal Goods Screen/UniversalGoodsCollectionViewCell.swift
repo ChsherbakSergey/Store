@@ -13,6 +13,10 @@ class UniversalGoodsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var universalImageView: UIImageView!
     @IBOutlet weak var universalPriceLabel: UILabel!
     @IBOutlet weak var universalNameLabel: UILabel!
+    @IBOutlet weak var universalTagLabel: UILabel!
+    @IBOutlet weak var universalOldPriceLabel: UILabel!
+    @IBOutlet weak var priceLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nameLabelTopConstraint: NSLayoutConstraint!
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes)
         -> UICollectionViewLayoutAttributes {

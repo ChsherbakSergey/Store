@@ -57,22 +57,22 @@ class OutletsSubcategoriesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if segue.identifier == "Men" {
-            let destVC = segue.destination as! UniversalOutletsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Для мужчин"
         }
         if segue.identifier == "Women" {
-            let destVC = segue.destination as! UniversalOutletsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Для женщин"
         }
         if segue.identifier == "Children" {
-            let destVC = segue.destination as! UniversalOutletsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Для детей"
         }
         if segue.identifier == "Accessories" {
-            let destVC = segue.destination as! UniversalOutletsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Аксессуары"
         }

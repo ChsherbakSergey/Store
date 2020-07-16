@@ -1,20 +1,20 @@
 //
-//  UniversalOutletsCollectionViewCell.swift
+//  SalesCollectionViewCell.swift
 //  BlackStarWear
 //
-//  Created by Sergey on 7/15/20.
+//  Created by Sergey on 7/16/20.
 //  Copyright © 2020 Chsherbak Sergey. All rights reserved.
 //
 
 import UIKit
 
-class UniversalOutletsCollectionViewCell: UICollectionViewCell {
+class SalesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var universalOutletsImageView: UIImageView!
-    @IBOutlet weak var universalOutletsOldPrice: UILabel!
-    @IBOutlet weak var universalOutletsPriceLabel: UILabel!
-    @IBOutlet weak var universalOutletsTagLabel: UILabel!
-    @IBOutlet weak var universalOutletsNameLabel: UILabel!
+    @IBOutlet weak var salesImageView: UIImageView!
+    @IBOutlet weak var salesTagLabel: UILabel!
+    @IBOutlet weak var salesOldPriceLabel: UILabel!
+    @IBOutlet weak var salesPriceLabel: UILabel!
+    @IBOutlet weak var salesNameLabel: UILabel!
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes)
         -> UICollectionViewLayoutAttributes {
@@ -30,8 +30,9 @@ class UniversalOutletsCollectionViewCell: UICollectionViewCell {
 
             let image = UIImage(data: imageData)
             DispatchQueue.main.async {
-                self.universalOutletsImageView.image = image
+                self.salesImageView.image = image
             }
         }
     }
+    
 }

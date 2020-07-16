@@ -60,7 +60,7 @@ extension UniversalGoodsViewController: UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width / 2
-        let height = width * 1.58
+        let height = width * 1.62
         return CGSize(width: width, height: height)
     }
     
@@ -71,9 +71,37 @@ extension UniversalGoodsViewController: UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let universalName = objects[indexPath.row].name
         let universalPrice = objects[indexPath.row].price
+        let universalTag = objects[indexPath.row].tag
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Universal", for: indexPath) as! UniversalGoodsCollectionViewCell
         cell.universalPriceLabel.text = String(universalPrice.dropLast(5)) + " руб."
+        let universalOldPrice = objects[indexPath.row].oldPrice
+        let universalOldPriceStrikeThrough = String((universalOldPrice?.dropLast(5) ?? "1990")) + " руб."
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: universalOldPriceStrikeThrough )
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
+        if universalOldPrice == nil {
+            cell.universalOldPriceLabel.text = ""
+            cell.priceLabelTopConstraint.constant = 5
+            cell.nameLabelTopConstraint.constant = 10
+            cell.universalPriceLabel.textColor = UIColor.black
+        } else {
+            cell.universalOldPriceLabel.attributedText = attributeString
+            cell.priceLabelTopConstraint.constant = 20
+            cell.nameLabelTopConstraint.constant = 5
+            cell.universalPriceLabel.textColor = UIColor.red
+        }
         cell.universalNameLabel.text = universalName
+        cell.universalTagLabel.layer.masksToBounds = true
+        cell.universalTagLabel.layer.cornerRadius = 2
+        if universalTag == nil {
+            cell.universalTagLabel.backgroundColor = UIColor.white
+        } else if universalTag == "new" {
+            cell.universalTagLabel.backgroundColor = UIColor.systemGreen
+            cell.universalTagLabel.text = universalTag
+        } else {
+            cell.universalTagLabel.text = universalTag
+            cell.universalTagLabel.backgroundColor = UIColor.red
+        }
+        
         cell.setImage(from: "https://blackstarshop.ru/" + "\(objects[indexPath.row].mainImage)")
         return cell
     }
