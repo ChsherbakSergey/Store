@@ -1371,7 +1371,7 @@
         <!--Universal Goods View Controller-->
         <scene sceneID="yIM-5L-dNv">
             <objects>
-                <viewController id="5TM-lm-ycx" customClass="UniversalGoodsViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Universal" id="5TM-lm-ycx" customClass="UniversalGoodsViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R4U-Ev-ANq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2931,7 +2931,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="loE-ZN-DeN"/>
+        <segue reference="CD5-2A-uiP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="tshirt" width="24" height="24"/>

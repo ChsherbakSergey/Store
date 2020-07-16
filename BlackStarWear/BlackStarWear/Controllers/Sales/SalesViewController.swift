@@ -41,7 +41,16 @@ class SalesController: UIViewController {
         navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
         navigationItem.backBarButtonItem?.tintColor = UIColor.black
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 16)!]
-        title = "Скидки"
+        navigationItem.title = "Скидки"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "ToDetail" {
+            let destVC = segue.destination as! SalesDetailViewController
+            destVC.objects = sender as? GoodsValue
+//            destVC.checkForItem = titleOfNavigationBar
+        }
     }
     
     
@@ -94,9 +103,9 @@ extension SalesController: UICollectionViewDelegateFlowLayout, UICollectionViewD
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let object = self.objects[indexPath.item]
-//        performSegue(withIdentifier: "ToDetail", sender: object)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let object = self.objects[indexPath.item]
+        performSegue(withIdentifier: "ToDetail", sender: object)
+    }
     
 }
