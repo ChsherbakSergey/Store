@@ -11,7 +11,7 @@
         <!--Мужская-->
         <scene sceneID="VmK-fO-g5L">
             <objects>
-                <viewController id="Krm-55-feZ" customClass="MensSubcategoriesViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Men" id="Krm-55-feZ" customClass="MensSubcategoriesViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HY2-9m-N1y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

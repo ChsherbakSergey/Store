@@ -71,7 +71,7 @@ class SalesDetailViewController: UIViewController {
     
     func setUI() {
             outletsTagLabel.text = objects?.tag
-        outletsArticulLabel.text = objects?.article
+            outletsArticulLabel.text = objects?.article
             outletsPriceLabel.text = String(objects?.price.dropLast(5) ?? "0") + " руб."
             outletsNameLabel.text = objects?.name
             let outletsOldPriceStrikeThrough = String(objects?.oldPrice?.dropLast(5) ?? "0") + " руб."
@@ -118,7 +118,7 @@ class SalesDetailViewController: UIViewController {
             } else if objects?.colorName.rawValue == "Черный/Красный" {
                 outletsColorImageView.backgroundColor = UIColor.systemRed
         }
-        
+    
     }
     
     func setImage(from url: String) {

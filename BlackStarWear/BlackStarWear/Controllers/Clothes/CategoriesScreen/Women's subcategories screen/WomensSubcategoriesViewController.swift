@@ -21,7 +21,7 @@ class WomensSubcategoriesViewController: UIViewController {
         setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
-//        loadCategories() {
+        loadCategories() {
             if let categories = listOfCategories {
                 let array = Array(categories.values)
                 array.forEach { (value) in
@@ -38,12 +38,12 @@ class WomensSubcategoriesViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                let subcategoryOrdering = HardCodedOrdering(ordering: "Спортивные костюмы", "Футболки и майки", "Толстовки и худи", "Платья", "Рубашки", "Куртки и бомберы", "Шорты", "Брюки и леггинсы", "Юбки", "Нижнее белье", "Пижамы", "Все товары категории")
+                let subcategoryOrdering = HardCodedOrdering(ordering: "Спортивные костюмы", "Футболки и майки", "Толстовки и худи", "Платья", "Куртки и бомберы", "Шорты", "Брюки и леггинсы", "Юбки", "Нижнее белье", "Пижамы", "Все товары категории")
                 let someSubcategories = self.arrayOfWomenSubcategories
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedWomensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
-//        }
+        }
     }
     
     func setNavigationBar() {
@@ -76,11 +76,11 @@ class WomensSubcategoriesViewController: UIViewController {
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Платья"
         }
-        if segue.identifier == "Shirt" {
-            let destVC = segue.destination as! UniversalGoodsViewController
-            destVC.id = sender as? Int
-            destVC.titleOfNavigationBar = "Рубашки"
-        }
+//        if segue.identifier == "Shirt" {
+//            let destVC = segue.destination as! UniversalGoodsViewController
+//            destVC.id = sender as? Int
+//            destVC.titleOfNavigationBar = "Рубашки"
+//        }
         if segue.identifier == "Jacket" {
             let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
@@ -146,38 +146,38 @@ extension WomensSubcategoriesViewController: UITableViewDelegate, UITableViewDat
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Dress") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
-            return cell
-        } else if indexPath.row == 4 {
-            let subcategory = sortedWomensSubcategories[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Shirt") as! WomensSubcategoriesTableViewCell
-            cell.womensSubcategoriesLabel.text = subcategory
-            return cell
-        } else if indexPath.row == 5 {
+            return cell }
+//            else if indexPath.row == 4 {
+//            let subcategory = sortedWomensSubcategories[indexPath.row]
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "Shirt") as! WomensSubcategoriesTableViewCell
+//            cell.womensSubcategoriesLabel.text = subcategory
+//            return cell }
+            else if indexPath.row == 4 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Jacket") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
             return cell
-        } else if indexPath.row == 6 {
+        } else if indexPath.row == 5 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Shorts") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
             return cell
-        } else if indexPath.row == 7 {
+        } else if indexPath.row == 6 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Pants") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
             return cell
-        } else if indexPath.row == 8 {
+        } else if indexPath.row == 7 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Skirt") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
             return cell
-        } else if indexPath.row == 9 {
+        } else if indexPath.row == 8 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Underwear") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
             return cell
-        } else if indexPath.row == 10 {
+        } else if indexPath.row == 9 {
             let subcategory = sortedWomensSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Pyjamas") as! WomensSubcategoriesTableViewCell
             cell.womensSubcategoriesLabel.text = subcategory
@@ -208,35 +208,35 @@ extension WomensSubcategoriesViewController: UITableViewDelegate, UITableViewDat
             let data = 54
             performSegue(withIdentifier: "Dress", sender: data)
         }
+//        if indexPath.row == 4 {
+//            let data = 55
+//            performSegue(withIdentifier: "Shirt", sender: data)
+//        }
         if indexPath.row == 4 {
-            let data = 55
-            performSegue(withIdentifier: "Shirt", sender: data)
-        }
-        if indexPath.row == 5 {
             let data = 48
             performSegue(withIdentifier: "Jacket", sender: data)
         }
-        if indexPath.row == 6 {
+        if indexPath.row == 5 {
             let data = 44
             performSegue(withIdentifier: "Shorts", sender: data)
         }
-        if indexPath.row == 7 {
+        if indexPath.row == 6 {
             let data = 46
             performSegue(withIdentifier: "Pants", sender: data)
         }
-        if indexPath.row == 8 {
+        if indexPath.row == 7 {
             let data = 45
             performSegue(withIdentifier: "Skirt", sender: data)
         }
-        if indexPath.row == 9 {
+        if indexPath.row == 8 {
             let data = 134
             performSegue(withIdentifier: "Underwear", sender: data)
         }
-        if indexPath.row == 10 {
+        if indexPath.row == 9 {
             let data = 315
             performSegue(withIdentifier: "Pyjamas", sender: data)
         }
-        if indexPath.row == 11 {
+        if indexPath.row == 10 {
             let data = 68
             performSegue(withIdentifier: "AllGoods", sender: data)
         }

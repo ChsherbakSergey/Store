@@ -21,7 +21,7 @@ class ChildrenSubcategoryViewController: UIViewController {
         setNavigationBar()
         tableView.delegate = self
         tableView.dataSource = self
-//        loadCategories() {
+        loadCategories() {
             if let categories = listOfCategories {
                 let array = Array(categories.values)
                 array.forEach { (value) in
@@ -43,7 +43,7 @@ class ChildrenSubcategoryViewController: UIViewController {
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedChildrenSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
-//        }
+        }
     }
     
     func setNavigationBar() {

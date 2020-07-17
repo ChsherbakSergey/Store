@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "BSWDesign" {
             let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
-            destVC.titleOfNavigationBar = "BSWDesign"
+            destVC.titleOfNavigationBar = "BSW Design"
         }
         if segue.identifier == "LUX" {
             let destVC = segue.destination as! UniversalGoodsViewController
@@ -35,7 +36,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "LIKEE" {
             let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
-            destVC.titleOfNavigationBar = "LIKEE"
+            destVC.titleOfNavigationBar = "Likee"
         }
     }
     
@@ -68,4 +69,38 @@ class HomeViewController: UIViewController {
         let data = 319
         performSegue(withIdentifier: "LIKEE", sender: data)
     }
+    
+    @IBAction func menCategoryButton(_ sender: Any) {
+        performSegue(withIdentifier: "MenCategory", sender: nil)
+    }
+    
+    @IBAction func womenCategoryButton(_ sender: Any) {
+        performSegue(withIdentifier: "WomenCategory", sender: nil)
+    }
+    
+    @IBAction func childrenCategoryButton(_ sender: Any) {
+        performSegue(withIdentifier: "ChildrenCategory", sender: nil)
+    }
+    
+    @IBAction func vkButton(_ sender: Any) {
+        showSafariVC(for: "https://vk.com/blackstarwear")
+    }
+    
+    @IBAction func facebookButton(_ sender: Any) {
+        showSafariVC(for: "https://www.facebook.com/blackstarwear/")
+    }
+    
+    @IBAction func instagramButton(_ sender: Any) {
+        showSafariVC(for: "https://www.instagram.com/blackstarwear/?hl=ru")
+    }
+    
+    func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else {
+            //Show an invalid URL Alert
+            return
+        }
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true, completion: nil)
+    }
+    
 }

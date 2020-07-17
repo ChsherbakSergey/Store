@@ -335,7 +335,7 @@
         <!--Женская-->
         <scene sceneID="ga9-cv-LDz">
             <objects>
-                <viewController id="Lmr-ct-5r6" customClass="WomensSubcategoriesViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Women" id="Lmr-ct-5r6" customClass="WomensSubcategoriesViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tVB-G4-60z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +344,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAm-Yp-tCS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="927.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="877.5"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GlJ-cx-21m">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -381,10 +381,10 @@
                                                 </cells>
                                             </collectionView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QZJ-6J-Mzy">
-                                                <rect key="frame" x="0.0" y="327.5" width="414" height="600"/>
+                                                <rect key="frame" x="0.0" y="327.5" width="414" height="550"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="600" id="rr8-Wb-vFc"/>
+                                                    <constraint firstAttribute="height" constant="550" id="Mgb-2s-16U"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tracksuit" id="fHc-St-LCI" customClass="WomensSubcategoriesTableViewCell" customModule="BlackStarWear" customModuleProvider="target">
@@ -737,7 +737,7 @@
         <!--Детская-->
         <scene sceneID="J1Q-ay-mfB">
             <objects>
-                <viewController id="1IY-P2-Bio" customClass="ChildrenSubcategoryViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Children" id="1IY-P2-Bio" customClass="ChildrenSubcategoryViewController" customModule="BlackStarWear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kJ6-uX-492">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2931,7 +2931,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CD5-2A-uiP"/>
+        <segue reference="c57-Cp-1kG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="tshirt" width="24" height="24"/>

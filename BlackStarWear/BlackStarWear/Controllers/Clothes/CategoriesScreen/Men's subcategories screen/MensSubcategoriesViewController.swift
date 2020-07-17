@@ -32,7 +32,7 @@ class MensSubcategoriesViewController: UIViewController {
         //Delegates
         tableView.delegate = self
         tableView.dataSource = self
-//        loadCategories() {
+        loadCategories() {
             if let categories = listOfCategories {
                 let array = Array(categories.values)
                 array.forEach { (value) in
@@ -53,7 +53,7 @@ class MensSubcategoriesViewController: UIViewController {
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedMensSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
             }
-//        }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
