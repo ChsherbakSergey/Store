@@ -27,7 +27,7 @@ class NewsSubcategoriesViewController: UIViewController {
                 array.forEach { (value) in
                     if value.subcategories.count == 0 {
                         return
-                    } else if Int(value.sortOrder) == 100 && value.subcategories.count != 0 {
+                    } else if value.name == "Новинки" && value.subcategories.count != 0 {
                         self.subcategoriesNamesArray.append(contentsOf: value.subcategories)
                         //                        print(self.subcategoriesNamesArray.count)
                         for i in 0...self.subcategoriesNamesArray.count - 1 {

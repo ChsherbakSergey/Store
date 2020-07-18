@@ -118,7 +118,47 @@ class SalesDetailViewController: UIViewController {
             } else if objects?.colorName.rawValue == "Черный/Красный" {
                 outletsColorImageView.backgroundColor = UIColor.systemRed
         }
-    
+        if objects?.attributes.count == 6 {
+            
+        } else if objects?.attributes.count == 5 {
+            outletsSixthParametrNameLabel.text = ""
+            outletsSixthParametrTextLabel.text = ""
+        } else if objects?.attributes.count == 4 {
+            outletsSixthParametrNameLabel.text = ""
+            outletsSixthParametrTextLabel.text = ""
+            outletsFifthParametrNameLabel.text = ""
+            outletsFifthParametrTextLabel.text = ""
+        } else if objects?.attributes.count == 3 {
+            outletsSixthParametrNameLabel.text = ""
+            outletsSixthParametrTextLabel.text = ""
+            outletsFifthParametrNameLabel.text = ""
+            outletsFifthParametrTextLabel.text = ""
+            outletsFourthParametrNameLabel.text = ""
+            outletsFourthParametrTextLabel.text = ""
+        }
+        else if objects?.attributes.count == 2 {
+            outletsSixthParametrNameLabel.text = ""
+            outletsSixthParametrTextLabel.text = ""
+            outletsFifthParametrNameLabel.text = ""
+            outletsFifthParametrTextLabel.text = ""
+            outletsFourthParametrNameLabel.text = ""
+            outletsFourthParametrTextLabel.text = ""
+            outletsThirdParametrNameLabel.text = ""
+            outletsThirdParametrTextLabel.text = ""
+        } else if objects?.attributes.count == 1 {
+            outletsSixthParametrNameLabel.text = ""
+            outletsSixthParametrTextLabel.text = ""
+            outletsFifthParametrNameLabel.text = ""
+            outletsFifthParametrTextLabel.text = ""
+            outletsFourthParametrNameLabel.text = ""
+            outletsFourthParametrTextLabel.text = ""
+            outletsThirdParametrNameLabel.text = ""
+            outletsThirdParametrTextLabel.text = ""
+            outletsSecondParametrNameLabel.text = ""
+            outletsSecondParametrTextLabel.text = ""
+        }
+        
+        
     }
     
     func setImage(from url: String) {
@@ -156,7 +196,18 @@ class SalesDetailViewController: UIViewController {
             destVC.objects = sender as? GoodsValue
             destVC.sizeDelegate = self
         }
+        if segue.identifier == "Test" {
+            let destVC = segue.destination as! TestViewController
+            destVC.objects = sender as? GoodsValue
+            destVC.titleOfGoods = title
+        }
     }
+    
+    @IBAction func testButton(_ sender: Any) {
+        let object = self.objects
+        performSegue(withIdentifier: "Test", sender: object)
+    }
+    
     
     
     @IBAction func chooseSizeButton(_ sender: Any) {

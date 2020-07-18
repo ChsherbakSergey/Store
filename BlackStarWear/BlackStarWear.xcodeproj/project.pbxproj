@@ -77,6 +77,8 @@
 		A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */; };
 		A551013724BA3658009A0F8C /* MensClothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A551013624BA3658009A0F8C /* MensClothes.storyboard */; };
 		A551013C24BA3B33009A0F8C /* MensJeansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013B24BA3B33009A0F8C /* MensJeansViewController.swift */; };
+		A5535B2D24C2FBD6002711E5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5535B2C24C2FBD6002711E5 /* TestViewController.swift */; };
+		A5535B2F24C2FBF2002711E5 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */; };
 		A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */; };
 		A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */; };
 		A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */; };
@@ -159,6 +161,8 @@
 		A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A551013624BA3658009A0F8C /* MensClothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MensClothes.storyboard; sourceTree = "<group>"; };
 		A551013B24BA3B33009A0F8C /* MensJeansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensJeansViewController.swift; sourceTree = "<group>"; };
+		A5535B2C24C2FBD6002711E5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsAGiftCertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendYourselfContainerViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 				A54B3CF924C0C61500BF7D2D /* SalesDetailViewController.swift */,
 				A54B3CFB24C0E0BC00BF7D2D /* SalesPopUpViewController.swift */,
 				A54B3CFD24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift */,
+				A5535B2C24C2FBD6002711E5 /* TestViewController.swift */,
+				A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */,
 			);
 			path = Sales;
 			sourceTree = "<group>";
@@ -600,12 +606,14 @@
 				A54AAE3E24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift in Sources */,
 				A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */,
 				A550288824A10B9E00774E0E /* ShoppingBagViewController.swift in Sources */,
+				A5535B2F24C2FBF2002711E5 /* TestTableViewCell.swift in Sources */,
 				A54DE4C824C19DD400D7386E /* HomePhonePopUpViewController.swift in Sources */,
 				A551013324B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift in Sources */,
 				A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */,
 				A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */,
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
+				A5535B2D24C2FBD6002711E5 /* TestViewController.swift in Sources */,
 				A55047E224C065E700DD27C0 /* SalesCollectionViewCell.swift in Sources */,
 				A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,

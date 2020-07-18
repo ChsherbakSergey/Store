@@ -38,7 +38,7 @@ class MensSubcategoriesViewController: UIViewController {
                 array.forEach { (value) in
                     if value.subcategories.count == 0 {
                         return
-                    } else if Int(value.sortOrder) == 0 && value.subcategories.count != 0 {
+                    } else if value.name == "Мужская" && value.subcategories.count != 0 {
                         self.subcategoriesNamesArray.append(contentsOf: value.subcategories)
                         for i in 0...self.subcategoriesNamesArray.count - 1 {
                             self.arrayOfMenSubcategories.append(self.subcategoriesNamesArray[i].name)

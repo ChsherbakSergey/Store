@@ -61,7 +61,7 @@ extension SalesController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width / 2
-        let height = width * 1.62
+        let height = width * 1.65
         return CGSize(width: width, height: height)
     }
     

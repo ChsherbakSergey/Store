@@ -41,7 +41,7 @@ class ClothesViewController: UIViewController {
 //                self.categoriesNamesArray = sortedArray(array: self.categoriesNamesArray, firstString: "Женская")
 //                self.categoriesNamesArray = sortedArray(array: self.categoriesNamesArray, firstString: "Мужская")
 //                self.categoriesNamesArray.removeLast(8)
-                let categoryOrdering = HardCodedOrdering(ordering: "Мужская", "Женская", "Детская", "Аксессуары", "Коллекции", "Скидки", "Новинки", "Предзаказ")
+                let categoryOrdering = HardCodedOrdering(ordering: "Мужская", "Женская", "Детская", "Аксессуары", "Коллекции", "Скидки", "Новинки")
                 let someCategories = self.categoriesNamesArray
                 let realCategories = someCategories.lazy.filter(categoryOrdering.contains)
                 self.sortedCategoriesArray = realCategories.sorted(by: categoryOrdering.areInIncreasingOrder)
