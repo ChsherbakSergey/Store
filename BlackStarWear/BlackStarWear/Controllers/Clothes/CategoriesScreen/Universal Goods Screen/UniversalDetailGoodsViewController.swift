@@ -24,134 +24,121 @@ class UniversalDetailGoodsViewController: UIViewController {
     
     @IBOutlet weak var universalArticulTextLabel: UILabel!
     
-    @IBOutlet weak var universalDecorativeElementLabel: UILabel!
-    
-    @IBOutlet weak var universalDecorativeElementTextLabel: UILabel!
-    
-    @IBOutlet weak var universalDrawingLabel: UILabel!
-    
-    @IBOutlet weak var universalDrawingTextLabel: UILabel!
-    
-    @IBOutlet weak var universalSesonLabel: UILabel!
-    
-    @IBOutlet weak var universalSesonTextLabel: UILabel!
-    
-    @IBOutlet weak var universalCompositionLabel: UILabel!
-    
-    @IBOutlet weak var universalCompositionTextLabel: UILabel!
-    
-    @IBOutlet weak var universalMadeInLabel: UILabel!
-    
-    @IBOutlet weak var universalMadeInTextLabel: UILabel!
-    
-    @IBOutlet weak var universalLookAfterLabel: UILabel!
-    
-    @IBOutlet weak var universalLookAfterTextLabel: UILabel!
-    
     @IBOutlet weak var universalDescriptionLabel: UILabel!
     
     @IBOutlet weak var chooseSizeButtonOutlet: UIButton!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     var objects: GoodsValue?
     var checkForItem: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        setTableViewHight()
         setNavigationBar()
         setUI()
         setImage(from: "https://blackstarshop.ru/" + "\(objects!.mainImage)")
         //        setColorImage(from: "https://blackstarshop.ru/" + "\(objects!.colorImageURL)")
     }
     
+    func setTableViewHight() {
+        let height = objects!.attributes.count * 17
+        tableViewHeightConstraint.constant = CGFloat(height)
+    }
+    
     func setNavigationBar() {
-        title = objects?.name
+        title = objects?.name.replacingOccurrences(of: "amp;", with: "")
     }
     
     func setUI() {
+        universalArticulTextLabel.text = objects?.article
+        universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: " ")
         universalPriceLabel.text = String(objects?.price.dropLast(5) ?? "0") + " руб."
-        universalNameLabel.text = objects?.name
+        universalNameLabel.text = objects?.name.replacingOccurrences(of: "amp;", with: "")
         universalColorLabel.text = objects?.colorName.rawValue
         universalColorImageView.layer.cornerRadius = universalColorImageView.frame.size.height / 2
         universalColorImageView.layer.borderColor = UIColor.black.cgColor
         universalColorImageView.layer.borderWidth = 1
-        if objects?.colorName.rawValue == "Фиолетовый" {
-            universalColorImageView.backgroundColor = UIColor.purple
+        if objects?.colorName.rawValue == "Фиолетовый" || objects?.colorName.rawValue == "Сиреневый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/purple.jpg")
         } else if objects?.colorName.rawValue == "Чайная роза" {
-            universalColorImageView.backgroundColor = UIColor.systemPink
-        } else if objects?.colorName.rawValue == "Бордовый" || objects?.colorName.rawValue == "Красный" {
-            universalColorImageView.backgroundColor = UIColor.red
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/vinous.jpg")
+        } else if objects?.colorName.rawValue == "Красный" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/red_ff0000.jpg")
         } else if objects?.colorName.rawValue == "Черный" {
-            universalColorImageView.backgroundColor = UIColor.black
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_000000.jpg")
+        } else if objects?.colorName.rawValue == "Бордовый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/vinous.jpg")
         } else if objects?.colorName.rawValue == "Черный/Золотой" {
-            universalColorImageView.backgroundColor = UIColor.systemYellow
-        } else if objects?.colorName.rawValue == "Темно-синий" {
-            universalColorImageView.backgroundColor = UIColor.systemIndigo
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-gold.jpg")
+        } else if objects?.colorName.rawValue == "Темно-синий" || objects?.colorName.rawValue == "Cиний"  {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/blue_0000ff.jpg")
         } else if objects?.colorName.rawValue == "Белый" {
-            universalColorImageView.backgroundColor = UIColor.white
-            universalColorImageView.layer.borderColor = UIColor.black.cgColor
-            universalColorImageView.layer.borderWidth = 1
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/white.gif")
         } else if objects?.colorName.rawValue == "Серый" {
-            universalColorImageView.backgroundColor = UIColor.lightGray
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/grey_838383.jpg")
         } else if objects?.colorName.rawValue == "Белый/Серый" {
             universalColorImageView.backgroundColor = UIColor.systemGray6
         } else if objects?.colorName.rawValue == "Серый/Черный" {
-            universalColorImageView.backgroundColor = UIColor.systemGray
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-grey.jpg")
         } else if objects?.colorName.rawValue == "Серый/Терракот" {
             universalColorImageView.backgroundColor = UIColor.brown
         } else if objects?.colorName.rawValue == "Камуфляж" {
-            universalColorImageView.backgroundColor = UIColor.systemGreen
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/camouflage.jpg")
         } else if objects?.colorName.rawValue == "Хаки" {
-            universalColorImageView.backgroundColor = UIColor.systemGreen
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/khaki_c3b091.jpg")
         } else if objects?.colorName.rawValue == "Тёмный хаки" {
-            universalColorImageView.backgroundColor = UIColor.systemGreen
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/khaki_c3b091.jpg")
         } else if objects?.colorName.rawValue == "Оранжевый" {
-            universalColorImageView.backgroundColor = UIColor.orange
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/orange-ffa500.png")
         } else if objects?.colorName.rawValue == "Черный/Красный" {
-            universalColorImageView.backgroundColor = UIColor.systemRed
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_red_000000.jpg")
+        } else if objects?.colorName.rawValue == "Розовый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/lightpink.jpg")
+        } else if objects?.colorName.rawValue == "Бежевый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/beige_F5F5DC.jpg")
+        } else if objects?.colorName.rawValue == "Серый меланж" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/gray_melange_dbd6dc.jpg")
+        } else if objects?.colorName.rawValue == "Лаймовый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/lime_00ff00.png")
+        } else if objects?.colorName.rawValue == "Желтый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/yellow_ffff00.jpg")
+        } else if objects?.colorName.rawValue == "Черный/Камуфляж" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-cam.jpg")
+        } else if objects?.colorName.rawValue == "Темно-серый" || objects?.colorName.rawValue == "Серый/Терракот" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/dark_gray_melange_60606d.jpg")
+        } else if objects?.colorName.rawValue == "Коричневый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/brown_964b00.jpg")
+        } else if objects?.colorName.rawValue == "Золотой" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/gold.jpg")
+        } else if objects?.colorName.rawValue == "Черный/Белый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_white_000fff.jpg")
+        } else if objects?.colorName.rawValue == "Серебряный" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/serebro.jpg")
+        } else if objects?.colorName.rawValue == "Зеленый" || objects?.colorName.rawValue == "Темно-зеленый" || objects?.colorName.rawValue == "Изумрудный" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/green_008000.jpg")
+        } else if objects?.colorName.rawValue == "Персиковый" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/persik.jpg")
+        } else if objects?.colorName.rawValue == "Антрацит меланж" {
+            universalColorImageView.backgroundColor = UIColor.gray
+        } else if objects?.colorName.rawValue == "Прозрачный" {
+            setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/pusto.png")
         }
-        
-        if checkForItem == "Ремни" {
-            universalArticulTextLabel.text = objects?.article
-            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
-            universalDrawingTextLabel.text = objects?.attributes[1].материал?.rawValue ?? "Не указано"
-            universalDrawingLabel.text = "Материал:"
-            universalSesonTextLabel.text = objects?.attributes[2].рисунок?.rawValue ?? "Не указано"
-            universalSesonLabel.text = "Рисунок:"
-            universalCompositionTextLabel.text = objects?.attributes[3].сезон?.rawValue ?? "Не указано"
-            universalCompositionLabel.text = "Сезон:"
-            universalMadeInTextLabel.text = objects?.attributes[4].странаПроизводителя?.rawValue ?? "Не указано"
-            universalLookAfterTextLabel.text = ""
-            universalLookAfterLabel.text = ""
-            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
-        } else if checkForItem == "Чехлы на телефоны" {
-            universalArticulTextLabel.text = objects?.article
-            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
-            universalDrawingTextLabel.text = objects?.attributes[1].материал?.rawValue ?? "Не указано"
-            universalDrawingLabel.text = "Материал:"
-            universalSesonTextLabel.text = objects?.attributes[2].рисунок?.rawValue ?? "Не указано"
-            universalSesonLabel.text = "Рисунок:"
-            universalCompositionTextLabel.text = objects?.attributes[2].странаПроизводителя?.rawValue ?? "Не указано"
-            universalCompositionLabel.text = "Страна производителя:"
-//            if objects?.attributes[4].типЧехлов?.rawValue.count == 0 {
-//                universalMadeInTextLabel.text = objects?.attributes[3].типЧехлов?.rawValue ?? "Не указано"
-//            } else {
-//                universalMadeInTextLabel.text = objects?.attributes[4].типЧехлов?.rawValue ?? "Не указано"
-//            }
-//            
-            universalMadeInLabel.text = "Тип чехла:"
-            universalLookAfterTextLabel.text = ""
-            universalLookAfterLabel.text = ""
-            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
-        } else {
-            universalArticulTextLabel.text = objects?.article
-            universalDecorativeElementTextLabel.text = objects?.attributes[0].декоративныйЭлемент?.rawValue ?? "Не указано"
-            universalDrawingTextLabel.text = objects?.attributes[1].рисунок?.rawValue ?? "Не указано"
-            universalSesonTextLabel.text = objects?.attributes[2].сезон?.rawValue ?? "Не указано"
-            universalCompositionTextLabel.text = objects?.attributes[0].состав?.rawValue ?? "Не указано"
-            universalMadeInTextLabel.text = objects?.attributes[0].странаПроизводителя?.rawValue ?? "Не указано"
-            universalLookAfterTextLabel.text = objects?.attributes[0].уходЗаВещами?.rawValue ?? "Не указано"
-            universalDescriptionLabel.text = objects?.goodsDescription.replacingOccurrences(of: "&nbsp;", with: "") ?? "Не указано"
-        }
+    
+//        case серыйСиний = "Серый/Синий"
+//        case черныйФиолетовый = "Черный/Фиолетовый"
+//        case черныйСалатовый = "Черный/Салатовый"
+//        case черныйЖелтый = "Черный/Желтый"
+//        case черныйБирюзовый = "Черный/Бирюзовый"
+//        case мультиколор = "Мультиколор"
+//        case черныйСеребряный = "Черный/Серебряный"
+//        case градиент = "Градиент"
+//        case коричневыйГрадиент = "Коричневый градиент"
         
         
     }
@@ -207,6 +194,23 @@ extension UniversalDetailGoodsViewController: UniversalDetailPopUpViewController
     
     func didChooseSize(size: String) {
         chooseSizeButtonOutlet.setTitle("Размер: " + size, for: .normal)
+    }
+    
+}
+
+extension UniversalDetailGoodsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        objects?.attributes.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let (name, attribute) = objects?.attributes[indexPath.row].getAttribute() ?? ("", "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Attributes") as! AttributesTableViewCell
+        cell.nameLabel.text = name
+        cell.descriptionLabel.text = attribute
+        cell.selectionStyle = .none
+        return cell
     }
     
 }

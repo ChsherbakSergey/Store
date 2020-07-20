@@ -70,7 +70,7 @@ extension SalesController: UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let outletsName = objects[indexPath.row].name
+        let outletsName = objects[indexPath.row].name.replacingOccurrences(of: "amp;", with: "")
         let outletsPrice = objects[indexPath.row].price
         let outletsTag = objects[indexPath.row].tag
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Outlets", for: indexPath) as! SalesCollectionViewCell

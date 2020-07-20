@@ -15,16 +15,12 @@ class TabBarController: UITabBarController {
         self.selectedIndex = 2
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+
+//Make men clothes in universal screen - done
+//Make another tableView with attributes in universal screen - done
+//Have to finish work with colors of goods. - done
+//Start working on shopping bag

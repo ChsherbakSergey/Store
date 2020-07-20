@@ -14,13 +14,10 @@
 		A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */; };
 		A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */; };
 		A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4424B8FFCC007EB792 /* NewsSubcategoriesViewController.swift */; };
-		A54AAE4924B90C7A007EB792 /* MensTshirtGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */; };
-		A54AAE4B24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */; };
+		A54B031324C4D47D0000F79B /* SalesAttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B031224C4D47D0000F79B /* SalesAttributesTableViewCell.swift */; };
 		A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */; };
 		A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */; };
 		A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312724B0F004003E5D88 /* GoodsLoader.swift */; };
-		A54B312B24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */; };
-		A54B312D24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */; };
 		A54B3CFA24C0C61500BF7D2D /* SalesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B3CF924C0C61500BF7D2D /* SalesDetailViewController.swift */; };
 		A54B3CFC24C0E0BC00BF7D2D /* SalesPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B3CFB24C0E0BC00BF7D2D /* SalesPopUpViewController.swift */; };
 		A54B3CFE24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B3CFD24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift */; };
@@ -30,20 +27,8 @@
 		A54DE4CA24C1A5DD00D7386E /* WorldWideDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DE4C924C1A5DD00D7386E /* WorldWideDeliveryViewController.swift */; };
 		A54E24DB24B758C300158BDE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DA24B758C300158BDE /* ImageLoader.swift */; };
 		A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DC24B758D000158BDE /* OrderingArray.swift */; };
-		A54E24DF24B7645200158BDE /* DetailMensTracksuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */; };
-		A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */; };
-		A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */; };
-		A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */; };
-		A54EB02424BC9192001D0608 /* MensUniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */; };
-		A54EB02624BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */; };
-		A54EB02824BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */; };
-		A54EB02A24BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */; };
-		A54EB02C24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */; };
 		A54EB02F24BCDAF8001D0608 /* UniversalGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */; };
 		A54EB03124BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */; };
-		A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */; };
-		A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */; };
-		A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */; };
 		A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E424B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift */; };
 		A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E624B86A0500567AF8 /* ChildrenSubcategoryViewController.swift */; };
 		A54F25EA24B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F25E924B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift */; };
@@ -72,18 +57,11 @@
 		A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */; };
 		A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0324A2625200C3EBD7 /* InformationCellData.swift */; };
 		A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */; };
-		A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */; };
-		A551013324B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */; };
-		A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */; };
-		A551013724BA3658009A0F8C /* MensClothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A551013624BA3658009A0F8C /* MensClothes.storyboard */; };
-		A551013C24BA3B33009A0F8C /* MensJeansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551013B24BA3B33009A0F8C /* MensJeansViewController.swift */; };
-		A5535B2D24C2FBD6002711E5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5535B2C24C2FBD6002711E5 /* TestViewController.swift */; };
-		A5535B2F24C2FBF2002711E5 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */; };
 		A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */; };
 		A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */; };
 		A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */; };
 		A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1AC24A61CC200EE61E1 /* SendAsATestContainerViewController.swift */; };
-		A55E6C4E24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E6C4D24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift */; };
+		A55922E924C59E89001DB104 /* AttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922E824C59E89001DB104 /* AttributesTableViewCell.swift */; };
 		A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E6C5024B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift */; };
 		A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E6C5224B7BA3400E5CA46 /* WomensSubcategoriesTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -96,13 +74,10 @@
 		A54AAE3F24B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE4224B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A54AAE4424B8FFCC007EB792 /* NewsSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubcategoriesViewController.swift; sourceTree = "<group>"; };
-		A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtGoodsViewController.swift; sourceTree = "<group>"; };
-		A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A54B031224C4D47D0000F79B /* SalesAttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesAttributesTableViewCell.swift; sourceTree = "<group>"; };
 		A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoriesViewController.swift; sourceTree = "<group>"; };
 		A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A54B312724B0F004003E5D88 /* GoodsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsLoader.swift; sourceTree = "<group>"; };
-		A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTracksuitGoodsViewController.swift; sourceTree = "<group>"; };
-		A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTraksuitGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A54B3CF924C0C61500BF7D2D /* SalesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesDetailViewController.swift; sourceTree = "<group>"; };
 		A54B3CFB24C0E0BC00BF7D2D /* SalesPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPopUpViewController.swift; sourceTree = "<group>"; };
 		A54B3CFD24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesPopUpTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,20 +87,8 @@
 		A54DE4C924C1A5DD00D7386E /* WorldWideDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldWideDeliveryViewController.swift; sourceTree = "<group>"; };
 		A54E24DA24B758C300158BDE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		A54E24DC24B758D000158BDE /* OrderingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingArray.swift; sourceTree = "<group>"; };
-		A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTracksuitViewController.swift; sourceTree = "<group>"; };
-		A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieDetailPopUpViewController.swift; sourceTree = "<group>"; };
-		A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodiePopUpTableViewCell.swift; sourceTree = "<group>"; };
-		A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTracksuitDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
-		A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalGoodsViewController.swift; sourceTree = "<group>"; };
-		A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensDetailUniversalGoodsViewController.swift; sourceTree = "<group>"; };
-		A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalDetailPopUpViewController.swift; sourceTree = "<group>"; };
-		A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensUniversalDetailPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		A54EB02E24BCDAF8001D0608 /* UniversalGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalGoodsViewController.swift; sourceTree = "<group>"; };
 		A54EB03024BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsViewController.swift; sourceTree = "<group>"; };
-		A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensHoodieGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensHoodieViewController.swift; sourceTree = "<group>"; };
 		A54F25E424B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A54F25E624B86A0500567AF8 /* ChildrenSubcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenSubcategoryViewController.swift; sourceTree = "<group>"; };
 		A54F25E924B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcsessoriesSubcategoriesViewController.swift; sourceTree = "<group>"; };
@@ -156,18 +119,11 @@
 		A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		A5509C0324A2625200C3EBD7 /* InformationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCellData.swift; sourceTree = "<group>"; };
 		A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTshirtViewController.swift; sourceTree = "<group>"; };
-		A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtDetailPopUpViewController.swift; sourceTree = "<group>"; };
-		A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensTshirtPopUpTableViewCell.swift; sourceTree = "<group>"; };
-		A551013624BA3658009A0F8C /* MensClothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MensClothes.storyboard; sourceTree = "<group>"; };
-		A551013B24BA3B33009A0F8C /* MensJeansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensJeansViewController.swift; sourceTree = "<group>"; };
-		A5535B2C24C2FBD6002711E5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsAGiftCertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendYourselfContainerViewController.swift; sourceTree = "<group>"; };
 		A553E1AC24A61CC200EE61E1 /* SendAsATestContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsATestContainerViewController.swift; sourceTree = "<group>"; };
-		A55E6C4D24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMensTracksuitPopUpViewController.swift; sourceTree = "<group>"; };
+		A55922E824C59E89001DB104 /* AttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesTableViewCell.swift; sourceTree = "<group>"; };
 		A55E6C5024B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomensSubcategoriesViewController.swift; sourceTree = "<group>"; };
 		A55E6C5224B7BA3400E5CA46 /* WomensSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomensSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,42 +157,13 @@
 			path = "New's subcategories screen";
 			sourceTree = "<group>";
 		};
-		A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A54AAE4824B90C7A007EB792 /* MensTshirtGoodsViewController.swift */,
-				A54AAE4A24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift */,
-				A551013024B9CA90009A0F8C /* DetailMensTshirtViewController.swift */,
-				A551013224B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift */,
-				A551013424BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift */,
-			);
-			path = "Men's T-shirt Goods Screen";
-			sourceTree = "<group>";
-		};
 		A54B312224B0E153003E5D88 /* Men's subcategories screen */ = {
 			isa = PBXGroup;
 			children = (
-				A54EB02224BC9022001D0608 /* Universal Goods Screen */,
-				A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */,
-				A551013A24BA3B07009A0F8C /* Men's Jeans Screen */,
-				A54AAE4624B90C4B007EB792 /* Men's T-shirt Goods Screen */,
-				A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */,
 				A54B312324B0E18A003E5D88 /* MensSubcategoriesViewController.swift */,
 				A54B312524B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift */,
 			);
 			path = "Men's subcategories screen";
-			sourceTree = "<group>";
-		};
-		A54B312924B0F0A7003E5D88 /* Men's Tracksuit Goods Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A54B312A24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift */,
-				A54B312C24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift */,
-				A54E24DE24B7645200158BDE /* DetailMensTracksuitViewController.swift */,
-				A55E6C4D24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift */,
-				A54EB02024BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift */,
-			);
-			path = "Men's Tracksuit Goods Screen";
 			sourceTree = "<group>";
 		};
 		A54E24D924B758AB00158BDE /* Extensions */ = {
@@ -246,18 +173,6 @@
 				A54E24DC24B758D000158BDE /* OrderingArray.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A54EB02224BC9022001D0608 /* Universal Goods Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A54EB02324BC9192001D0608 /* MensUniversalGoodsViewController.swift */,
-				A54EB02524BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift */,
-				A54EB02724BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift */,
-				A54EB02924BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift */,
-				A54EB02B24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift */,
-			);
-			path = "Universal Goods Screen";
 			sourceTree = "<group>";
 		};
 		A54EB02D24BCDABB001D0608 /* Universal Goods Screen */ = {
@@ -271,18 +186,6 @@
 				A53BD55A24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift */,
 			);
 			path = "Universal Goods Screen";
-			sourceTree = "<group>";
-		};
-		A54EB8AB24BBA840008F8DCF /* Men's Hoodie Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A54EB8AC24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift */,
-				A54EB8AE24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift */,
-				A54EB8B024BBB946008F8DCF /* DetailMensHoodieViewController.swift */,
-				A54EB01C24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift */,
-				A54EB01E24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift */,
-			);
-			path = "Men's Hoodie Screen";
 			sourceTree = "<group>";
 		};
 		A54F25E324B8674600567AF8 /* Children's subcategories screen */ = {
@@ -402,8 +305,7 @@
 				A54B3CF924C0C61500BF7D2D /* SalesDetailViewController.swift */,
 				A54B3CFB24C0E0BC00BF7D2D /* SalesPopUpViewController.swift */,
 				A54B3CFD24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift */,
-				A5535B2C24C2FBD6002711E5 /* TestViewController.swift */,
-				A5535B2E24C2FBF2002711E5 /* TestTableViewCell.swift */,
+				A54B031224C4D47D0000F79B /* SalesAttributesTableViewCell.swift */,
 			);
 			path = Sales;
 			sourceTree = "<group>";
@@ -435,22 +337,14 @@
 		A551013924BA3681009A0F8C /* mensClothes */ = {
 			isa = PBXGroup;
 			children = (
-				A551013624BA3658009A0F8C /* MensClothes.storyboard */,
 			);
 			path = mensClothes;
-			sourceTree = "<group>";
-		};
-		A551013A24BA3B07009A0F8C /* Men's Jeans Screen */ = {
-			isa = PBXGroup;
-			children = (
-				A551013B24BA3B33009A0F8C /* MensJeansViewController.swift */,
-			);
-			path = "Men's Jeans Screen";
 			sourceTree = "<group>";
 		};
 		A553364524BF97EE001872B2 /* Outlets */ = {
 			isa = PBXGroup;
 			children = (
+				A55922E824C59E89001DB104 /* AttributesTableViewCell.swift */,
 			);
 			path = Outlets;
 			sourceTree = "<group>";
@@ -575,7 +469,6 @@
 				A550287A24A1048100774E0E /* SalesStoryboard.storyboard in Resources */,
 				A550288224A104D700774E0E /* ProfileStoryboard.storyboard in Resources */,
 				A550287C24A104A100774E0E /* ClothesStoryboard.storyboard in Resources */,
-				A551013724BA3658009A0F8C /* MensClothes.storyboard in Resources */,
 				A550286924A0E1F700774E0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,75 +481,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54DE4CA24C1A5DD00D7386E /* WorldWideDeliveryViewController.swift in Sources */,
-				A54EB8AF24BBADC3008F8DCF /* MensHoodieGoodsCollectionViewCell.swift in Sources */,
-				A54EB02A24BCBF4D001D0608 /* MensUniversalDetailPopUpViewController.swift in Sources */,
 				A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */,
-				A54AAE4924B90C7A007EB792 /* MensTshirtGoodsViewController.swift in Sources */,
 				A54F25EF24B8982700567AF8 /* CollectionsSubcategoriesTableViewCell.swift in Sources */,
-				A54B312D24B0F112003E5D88 /* MensTraksuitGoodsCollectionViewCell.swift in Sources */,
 				A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */,
 				A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */,
 				A54F25EC24B8797E00567AF8 /* AcsessoriesSubcategoriesTableViewCell.swift in Sources */,
 				A54F25F124B8984000567AF8 /* CollectionsSubcategoriesViewController.swift in Sources */,
 				A550288424A10B5F00774E0E /* ClothesViewController.swift in Sources */,
-				A54E24DF24B7645200158BDE /* DetailMensTracksuitViewController.swift in Sources */,
 				A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */,
-				A55E6C4E24B79E1500E5CA46 /* DetailMensTracksuitPopUpViewController.swift in Sources */,
-				A54EB02824BCB5F4001D0608 /* MensDetailUniversalGoodsViewController.swift in Sources */,
 				A54AAE3E24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift in Sources */,
 				A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */,
 				A550288824A10B9E00774E0E /* ShoppingBagViewController.swift in Sources */,
-				A5535B2F24C2FBF2002711E5 /* TestTableViewCell.swift in Sources */,
 				A54DE4C824C19DD400D7386E /* HomePhonePopUpViewController.swift in Sources */,
-				A551013324B9F596009A0F8C /* MensTshirtDetailPopUpViewController.swift in Sources */,
+				A55922E924C59E89001DB104 /* AttributesTableViewCell.swift in Sources */,
 				A54B312624B0E1F7003E5D88 /* MensSubcategoryTableViewCell.swift in Sources */,
 				A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */,
 				A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */,
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
-				A5535B2D24C2FBD6002711E5 /* TestViewController.swift in Sources */,
 				A55047E224C065E700DD27C0 /* SalesCollectionViewCell.swift in Sources */,
-				A54EB02124BC82D7001D0608 /* MensTracksuitDetailPopUpTableViewCell.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
 				A53BD55B24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift in Sources */,
 				A54B3CFC24C0E0BC00BF7D2D /* SalesPopUpViewController.swift in Sources */,
-				A54EB01F24BC630F001D0608 /* MensHoodiePopUpTableViewCell.swift in Sources */,
 				A53BD55924BE31870002182A /* UniversalDetailPopUpViewController.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
 				A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */,
-				A551013124B9CA90009A0F8C /* DetailMensTshirtViewController.swift in Sources */,
 				A54B3CFE24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
 				A53BD55724BE247E0002182A /* UniversalDetailGoodsViewController.swift in Sources */,
 				A54E24DD24B758D000158BDE /* OrderingArray.swift in Sources */,
 				A550287624A0F78E00774E0E /* TabBarController.swift in Sources */,
-				A54EB8B124BBB946008F8DCF /* DetailMensHoodieViewController.swift in Sources */,
 				A54B3CFA24C0C61500BF7D2D /* SalesDetailViewController.swift in Sources */,
 				A54CC89624A3818E0056513E /* ForgotPasswordViewController.swift in Sources */,
 				A54F25E724B86A0500567AF8 /* ChildrenSubcategoryViewController.swift in Sources */,
 				A54EB03124BCDC3E001D0608 /* UniversalGoodsCollectionViewCell.swift in Sources */,
 				A54B312424B0E18A003E5D88 /* MensSubcategoriesViewController.swift in Sources */,
-				A54EB02624BC91AE001D0608 /* MensUniversalGoodsCollectionViewCell.swift in Sources */,
 				A54F25EA24B8795C00567AF8 /* AcsessoriesSubcategoriesViewController.swift in Sources */,
 				A550286224A0E1F700774E0E /* AppDelegate.swift in Sources */,
 				A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */,
-				A54EB02424BC9192001D0608 /* MensUniversalGoodsViewController.swift in Sources */,
 				A54EB02F24BCDAF8001D0608 /* UniversalGoodsViewController.swift in Sources */,
-				A551013C24BA3B33009A0F8C /* MensJeansViewController.swift in Sources */,
 				A550286424A0E1F700774E0E /* SceneDelegate.swift in Sources */,
-				A551013524BA10FF009A0F8C /* MensTshirtPopUpTableViewCell.swift in Sources */,
 				A550288A24A10BA900774E0E /* ProfileViewController.swift in Sources */,
 				A54E24DB24B758C300158BDE /* ImageLoader.swift in Sources */,
-				A54AAE4B24B90CB7007EB792 /* MensTshirtGoodsCollectionViewCell.swift in Sources */,
 				A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */,
-				A54EB8AD24BBADA6008F8DCF /* MensHoodieGoodsViewController.swift in Sources */,
-				A54EB01D24BC62E3001D0608 /* MensHoodieDetailPopUpViewController.swift in Sources */,
 				A550288624A10B8A00774E0E /* HomeViewController.swift in Sources */,
 				A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */,
-				A54B312B24B0F0EE003E5D88 /* MensTracksuitGoodsViewController.swift in Sources */,
 				A5509BFA24A2009600C3EBD7 /* CategoryTableViewCell.swift in Sources */,
 				A54CC89824A39DD50056513E /* ReturnViewController.swift in Sources */,
+				A54B031324C4D47D0000F79B /* SalesAttributesTableViewCell.swift in Sources */,
 				A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */,
-				A54EB02C24BCBF6F001D0608 /* MensUniversalDetailPopUpTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

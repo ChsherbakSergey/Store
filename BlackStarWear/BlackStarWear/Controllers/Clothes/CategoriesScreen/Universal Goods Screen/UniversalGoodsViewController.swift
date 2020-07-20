@@ -69,7 +69,7 @@ extension UniversalGoodsViewController: UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let universalName = objects[indexPath.row].name
+        let universalName = objects[indexPath.row].name.replacingOccurrences(of: "amp;", with: "")
         let universalPrice = objects[indexPath.row].price
         let universalTag = objects[indexPath.row].tag
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Universal", for: indexPath) as! UniversalGoodsCollectionViewCell

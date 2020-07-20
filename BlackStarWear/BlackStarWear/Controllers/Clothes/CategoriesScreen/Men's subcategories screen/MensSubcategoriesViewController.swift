@@ -58,28 +58,48 @@ class MensSubcategoriesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        if segue.identifier == "Jeans" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Джинсы"
+        }
+        if segue.identifier == "Tracksuit" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Спортивные костюмы"
+        }
+        if segue.identifier == "T-Shirt" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Футболки и майки"
+        }
+        if segue.identifier == "Hoodie" {
+            let destVC = segue.destination as! UniversalGoodsViewController
+            destVC.id = sender as? Int
+            destVC.titleOfNavigationBar = "Толстовки и худи"
+        }
         if segue.identifier == "Jacket" {
-            let destVC = segue.destination as! MensUniversalGoodsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Куртки и бомберы"
         }
         if segue.identifier == "Pants" {
-            let destVC = segue.destination as! MensUniversalGoodsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Брюки"
         }
         if segue.identifier == "Shorts" {
-            let destVC = segue.destination as! MensUniversalGoodsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Шорты"
         }
         if segue.identifier == "Pyjamas" {
-            let destVC = segue.destination as! MensUniversalGoodsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Пижамы"
         }
         if segue.identifier == "AllGoods" {
-            let destVC = segue.destination as! MensUniversalGoodsViewController
+            let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Все товары категории"
         }
@@ -153,6 +173,22 @@ extension MensSubcategoriesViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let data = 173
+            performSegue(withIdentifier: "Jeans", sender: data)
+        }
+        if indexPath.row == 1 {
+            let data = 42
+            performSegue(withIdentifier: "Tracksuit", sender: data)
+        }
+        if indexPath.row == 2 {
+            let data = 40
+            performSegue(withIdentifier: "T-Shirt", sender: data)
+        }
+        if indexPath.row == 3 {
+            let data = 43
+            performSegue(withIdentifier: "Hoodie", sender: data)
+        }
         if indexPath.row == 4 {
             let data = 38
             performSegue(withIdentifier: "Jacket", sender: data)

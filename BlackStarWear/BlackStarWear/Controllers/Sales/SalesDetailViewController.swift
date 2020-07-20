@@ -28,52 +28,39 @@ class SalesDetailViewController: UIViewController {
     
     @IBOutlet weak var outletsArticulLabel: UILabel!
     
-    @IBOutlet weak var outletsFirstParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsFirstParametrTextLabel: UILabel!
-    
-    @IBOutlet weak var outletsSecondParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsSecondParametrTextLabel: UILabel!
-    
-    @IBOutlet weak var outletsThirdParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsThirdParametrTextLabel: UILabel!
-    
-    @IBOutlet weak var outletsFourthParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsFourthParametrTextLabel: UILabel!
-    
-    @IBOutlet weak var outletsFifthParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsFifthParametrTextLabel: UILabel!
-    
-    @IBOutlet weak var outletsSixthParametrNameLabel: UILabel!
-    
-    @IBOutlet weak var outletsSixthParametrTextLabel: UILabel!
-    
     @IBOutlet weak var outletsDescriptionLabel: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     var objects: GoodsValue?
     var checkForItem: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTableViewHight()
+        tableView.delegate = self
+        tableView.dataSource = self
         setNavigationBar()
         setUI()
         setImage(from: "https://blackstarshop.ru/" + "\(objects!.mainImage)")
     }
+    
+    func setTableViewHight() {
+        let height = objects!.attributes.count * 17
+        tableViewHeightConstraint.constant = CGFloat(height)
+    }
 
     func setNavigationBar() {
-        title = objects?.name
+        title = objects?.name.replacingOccurrences(of: "amp;", with: "")
     }
     
     func setUI() {
             outletsTagLabel.text = objects?.tag
-            outletsArticulLabel.text = objects?.article
+            outletsArticulLabel.text = objects?.article ?? "Не указан"
             outletsPriceLabel.text = String(objects?.price.dropLast(5) ?? "0") + " руб."
-            outletsNameLabel.text = objects?.name
+            outletsNameLabel.text = objects?.name.replacingOccurrences(of: "BS&amp;", with: " ")
             let outletsOldPriceStrikeThrough = String(objects?.oldPrice?.dropLast(5) ?? "0") + " руб."
             let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: outletsOldPriceStrikeThrough )
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
@@ -83,82 +70,71 @@ class SalesDetailViewController: UIViewController {
             outletsColorImageView.layer.cornerRadius = outletsColorImageView.frame.size.height / 2
             outletsColorImageView.layer.borderColor = UIColor.black.cgColor
             outletsColorImageView.layer.borderWidth = 1
-            if objects?.colorName.rawValue == "Фиолетовый" {
-                outletsColorImageView.backgroundColor = UIColor.purple
+            if objects?.colorName.rawValue == "Фиолетовый" || objects?.colorName.rawValue == "Сиреневый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/purple.jpg")
             } else if objects?.colorName.rawValue == "Чайная роза" {
-                outletsColorImageView.backgroundColor = UIColor.systemPink
-            } else if objects?.colorName.rawValue == "Бордовый" || objects?.colorName.rawValue == "Красный" {
-                outletsColorImageView.backgroundColor = UIColor.red
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/vinous.jpg")
+            } else if objects?.colorName.rawValue == "Красный" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/red_ff0000.jpg")
             } else if objects?.colorName.rawValue == "Черный" {
-                outletsColorImageView.backgroundColor = UIColor.black
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_000000.jpg")
+            } else if objects?.colorName.rawValue == "Бордовый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/vinous.jpg")
             } else if objects?.colorName.rawValue == "Черный/Золотой" {
-                outletsColorImageView.backgroundColor = UIColor.systemYellow
-            } else if objects?.colorName.rawValue == "Темно-синий" {
-                outletsColorImageView.backgroundColor = UIColor.systemIndigo
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-gold.jpg")
+            } else if objects?.colorName.rawValue == "Темно-синий" || objects?.colorName.rawValue == "Cиний"  {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/blue_0000ff.jpg")
             } else if objects?.colorName.rawValue == "Белый" {
-                outletsColorImageView.backgroundColor = UIColor.white
-                outletsColorImageView.layer.borderColor = UIColor.black.cgColor
-                outletsColorImageView.layer.borderWidth = 1
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/white.gif")
             } else if objects?.colorName.rawValue == "Серый" {
-                outletsColorImageView.backgroundColor = UIColor.lightGray
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/grey_838383.jpg")
             } else if objects?.colorName.rawValue == "Белый/Серый" {
                 outletsColorImageView.backgroundColor = UIColor.systemGray6
             } else if objects?.colorName.rawValue == "Серый/Черный" {
-                outletsColorImageView.backgroundColor = UIColor.systemGray
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-grey.jpg")
             } else if objects?.colorName.rawValue == "Серый/Терракот" {
                 outletsColorImageView.backgroundColor = UIColor.brown
             } else if objects?.colorName.rawValue == "Камуфляж" {
-                outletsColorImageView.backgroundColor = UIColor.systemGreen
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/camouflage.jpg")
             } else if objects?.colorName.rawValue == "Хаки" {
-                outletsColorImageView.backgroundColor = UIColor.systemGreen
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/khaki_c3b091.jpg")
             } else if objects?.colorName.rawValue == "Тёмный хаки" {
-                outletsColorImageView.backgroundColor = UIColor.systemGreen
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/khaki_c3b091.jpg")
             } else if objects?.colorName.rawValue == "Оранжевый" {
-                outletsColorImageView.backgroundColor = UIColor.orange
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/orange-ffa500.png")
             } else if objects?.colorName.rawValue == "Черный/Красный" {
-                outletsColorImageView.backgroundColor = UIColor.systemRed
-        }
-        if objects?.attributes.count == 6 {
-            
-        } else if objects?.attributes.count == 5 {
-            outletsSixthParametrNameLabel.text = ""
-            outletsSixthParametrTextLabel.text = ""
-        } else if objects?.attributes.count == 4 {
-            outletsSixthParametrNameLabel.text = ""
-            outletsSixthParametrTextLabel.text = ""
-            outletsFifthParametrNameLabel.text = ""
-            outletsFifthParametrTextLabel.text = ""
-        } else if objects?.attributes.count == 3 {
-            outletsSixthParametrNameLabel.text = ""
-            outletsSixthParametrTextLabel.text = ""
-            outletsFifthParametrNameLabel.text = ""
-            outletsFifthParametrTextLabel.text = ""
-            outletsFourthParametrNameLabel.text = ""
-            outletsFourthParametrTextLabel.text = ""
-        }
-        else if objects?.attributes.count == 2 {
-            outletsSixthParametrNameLabel.text = ""
-            outletsSixthParametrTextLabel.text = ""
-            outletsFifthParametrNameLabel.text = ""
-            outletsFifthParametrTextLabel.text = ""
-            outletsFourthParametrNameLabel.text = ""
-            outletsFourthParametrTextLabel.text = ""
-            outletsThirdParametrNameLabel.text = ""
-            outletsThirdParametrTextLabel.text = ""
-        } else if objects?.attributes.count == 1 {
-            outletsSixthParametrNameLabel.text = ""
-            outletsSixthParametrTextLabel.text = ""
-            outletsFifthParametrNameLabel.text = ""
-            outletsFifthParametrTextLabel.text = ""
-            outletsFourthParametrNameLabel.text = ""
-            outletsFourthParametrTextLabel.text = ""
-            outletsThirdParametrNameLabel.text = ""
-            outletsThirdParametrTextLabel.text = ""
-            outletsSecondParametrNameLabel.text = ""
-            outletsSecondParametrTextLabel.text = ""
-        }
-        
-        
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_red_000000.jpg")
+            } else if objects?.colorName.rawValue == "Розовый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/lightpink.jpg")
+            } else if objects?.colorName.rawValue == "Бежевый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/beige_F5F5DC.jpg")
+            } else if objects?.colorName.rawValue == "Серый меланж" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/gray_melange_dbd6dc.jpg")
+            } else if objects?.colorName.rawValue == "Лаймовый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/lime_00ff00.png")
+            } else if objects?.colorName.rawValue == "Желтый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/yellow_ffff00.jpg")
+            } else if objects?.colorName.rawValue == "Черный/Камуфляж" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black-cam.jpg")
+            } else if objects?.colorName.rawValue == "Темно-серый" || objects?.colorName.rawValue == "Серый/Терракот" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/dark_gray_melange_60606d.jpg")
+            } else if objects?.colorName.rawValue == "Коричневый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/brown_964b00.jpg")
+            } else if objects?.colorName.rawValue == "Золотой" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/gold.jpg")
+            } else if objects?.colorName.rawValue == "Черный/Белый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/black_white_000fff.jpg")
+            } else if objects?.colorName.rawValue == "Серебряный" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/serebro.jpg")
+            } else if objects?.colorName.rawValue == "Зеленый" || objects?.colorName.rawValue == "Темно-зеленый" || objects?.colorName.rawValue == "Изумрудный" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/green_008000.jpg")
+            } else if objects?.colorName.rawValue == "Персиковый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/persik.jpg")
+            } else if objects?.colorName.rawValue == "Антрацит меланж" {
+                outletsColorImageView.backgroundColor = UIColor.gray
+            } else if objects?.colorName.rawValue == "Прозрачный" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/pusto.png")
+            }
     }
     
     func setImage(from url: String) {
@@ -196,19 +172,7 @@ class SalesDetailViewController: UIViewController {
             destVC.objects = sender as? GoodsValue
             destVC.sizeDelegate = self
         }
-        if segue.identifier == "Test" {
-            let destVC = segue.destination as! TestViewController
-            destVC.objects = sender as? GoodsValue
-            destVC.titleOfGoods = title
-        }
     }
-    
-    @IBAction func testButton(_ sender: Any) {
-        let object = self.objects
-        performSegue(withIdentifier: "Test", sender: object)
-    }
-    
-    
     
     @IBAction func chooseSizeButton(_ sender: Any) {
         let object = self.objects
@@ -224,3 +188,23 @@ extension SalesDetailViewController: SalesPopUpViewControllerDelegate {
     }
     
 }
+
+
+extension SalesDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        objects?.attributes.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let (name, attribute) = objects?.attributes[indexPath.row].getAttribute() ?? ("", "")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SalesAttributes") as! SalesAttributesTableViewCell
+        cell.nameLabel.text = name
+        cell.descriptionLabel.text = attribute
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+}
+
+

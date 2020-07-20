@@ -15,13 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh9-yu-Udc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh9-yu-Udc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="2329"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cR2-Oy-xdP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2162.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0j-uI-iyl">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0j-uI-iyl">
                                                 <rect key="frame" x="20" y="20" width="374" height="166"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="H0j-uI-iyl" secondAttribute="height" multiplier="2.25:1" id="qvN-js-Dt9"/>
@@ -31,7 +31,7 @@
                                                     <action selector="bswDesignButton:" destination="RVz-w6-kCA" eventType="touchUpInside" id="4Xq-AK-sse"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-e1-S2H">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2A-e1-S2H">
                                                 <rect key="frame" x="20" y="206" width="374" height="166.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="B2A-e1-S2H" secondAttribute="height" multiplier="2.25:1" id="7s3-31-qoA"/>
@@ -41,7 +41,7 @@
                                                     <segue destination="huK-VK-UeJ" kind="presentation" id="csz-pe-dMZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-EJ-kXj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-EJ-kXj">
                                                 <rect key="frame" x="20" y="392.5" width="374" height="166"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="vXm-EJ-kXj" secondAttribute="height" multiplier="2.25:1" id="XXf-ma-bbi"/>
@@ -51,7 +51,7 @@
                                                     <action selector="luxButton:" destination="RVz-w6-kCA" eventType="touchUpInside" id="NIn-nf-Hn2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcR-xa-0UG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcR-xa-0UG">
                                                 <rect key="frame" x="20" y="578.5" width="374" height="166.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jcR-xa-0UG" secondAttribute="height" multiplier="2.25:1" id="onA-Lk-dqN"/>
@@ -61,7 +61,7 @@
                                                     <action selector="bbLinesButton:" destination="RVz-w6-kCA" eventType="touchUpInside" id="JWq-L5-o2U"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hho-sj-EpY">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hho-sj-EpY">
                                                 <rect key="frame" x="20" y="765" width="374" height="166"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Hho-sj-EpY" secondAttribute="height" multiplier="2.25:1" id="32Z-32-0Gw"/>
@@ -78,7 +78,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="Bsj-G8-8f5"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivm-d4-V9L">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivm-d4-V9L">
                                                 <rect key="frame" x="20" y="977" width="374" height="374"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ivm-d4-V9L" secondAttribute="height" multiplier="1:1" id="hv9-xi-cvH"/>
@@ -88,7 +88,7 @@
                                                     <action selector="menCategoryButton:" destination="RVz-w6-kCA" eventType="touchUpInside" id="ZDY-ki-s67"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqu-2H-cUz">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqu-2H-cUz">
                                                 <rect key="frame" x="20" y="1371" width="374" height="374"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Uqu-2H-cUz" secondAttribute="height" multiplier="1:1" id="Slt-mA-Zi9"/>
@@ -98,7 +98,7 @@
                                                     <action selector="womenCategoryButton:" destination="RVz-w6-kCA" eventType="touchUpInside" id="FLa-72-lC8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-nI-tfQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-nI-tfQ">
                                                 <rect key="frame" x="20" y="1765" width="374" height="136"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jQa-nI-tfQ" secondAttribute="height" multiplier="2.75:1" id="nkZ-WB-pvn"/>
@@ -384,7 +384,7 @@
         <!--Men-->
         <scene sceneID="tyS-8B-brg">
             <objects>
-                <viewControllerPlaceholder storyboardName="MensClothes" referencedIdentifier="Men" id="j0d-PA-HAs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ClothesStoryboard" referencedIdentifier="Men" id="j0d-PA-HAs" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8WO-l2-1hF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT3-as-MMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

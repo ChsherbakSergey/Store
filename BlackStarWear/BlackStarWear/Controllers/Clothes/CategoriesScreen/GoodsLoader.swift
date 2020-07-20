@@ -41,9 +41,58 @@ struct Attribute: Codable {
     let рисунок: Рисунок?
     let материал: Материал?
     let типЧехлов: ТипЧехлов?
+    let наполнитель: Наполнитель?
+    let материалВерха: МатериалВерха?
+    let защитаОтУФ: ЗащитаОтУф?
+    let материалЛинз: МатериалЛинз?
+    let материалОправы: МатериалОправы?
+    let назначениеРемняСумки: НазначениеРемняСумки?
+    let принт: Принт?
+    let поляризация: Поляризация?
+    
+    func getAttribute() -> (name: String, attribute: String) {
+        if let el = декоративныйЭлемент {
+            return ("Декоративный элемент: ", el.rawValue)
+        } else if let el = сезон {
+            return ("Сезон: ", el.rawValue)
+        } else if let el = состав {
+            return ("Состав : ", el.rawValue)
+        } else if let el = странаПроизводителя {
+            return ("Страна производителя : ", el.rawValue)
+        } else if let el = уходЗаВещами {
+            return ("Уход за вещами : ", el.rawValue)
+        } else if let el = рисунок {
+            return ("Рисунок : ", el.rawValue)
+        } else if let el = материал {
+            return ("Материал : ", el.rawValue)
+        } else if let el = типЧехлов {
+            return ("Тип чехлов : ", el.rawValue)
+        } else if let el = наполнитель {
+            return ("Наполнитель : ", el.rawValue)
+        } else if let el = материалВерха {
+            return ("Материал верха : ", el.rawValue)
+        } else if let el = защитаОтУФ {
+            return ("Защита от УФ : ", el.rawValue)
+        } else if let el = материалЛинз {
+            return ("Материал линз : ", el.rawValue)
+        } else if let el = материалОправы {
+            return ("Материал оправы : ", el.rawValue)
+        } else if let el = назначениеРемняСумки {
+            return ("Назначение ремня сумки : ", el.rawValue)
+        } else if let el = принт {
+            return ("Принт : ", el.rawValue)
+        } else if let el = поляризация {
+            return ("Поляризация : ", el.rawValue)
+        } else { //тут аналогичные проверки для других атрибутов
+            return ("", "")
+        }
+        
+    }
 
     enum CodingKeys: String, CodingKey {
         case декоративныйЭлемент = "Декоративный элемент"
+        case наполнитель = "Наполнитель"
+        case материалВерха = "Материал верха"
         case сезон = "Сезон"
         case состав = "Состав"
         case странаПроизводителя = "Страна производителя"
@@ -51,15 +100,56 @@ struct Attribute: Codable {
         case рисунок = "Рисунок"
         case материал = "Материал"
         case типЧехлов = "Тип чехлов"
+        case защитаОтУФ = "Защита от УФ"
+        case материалЛинз = "Материал линз"
+        case материалОправы = "Материал оправы"
+        case назначениеРемняСумки = "Назначение ремня сумки"
+        case принт = "Принт"
+        case поляризация = "Поляризация"
     }
 }
 
-//if title == "Чехлы на телефон" -> madeInLabel.text == "Тип Чехлов"
+enum Поляризация: String, Codable {
+    case нет = "Нет"
+    case да = "Да"
+}
+
+enum Принт: String, Codable {
+    case фотопринт = "Фотопринт"
+    case комбинированный = "Комбинированный"
+}
+
+enum НазначениеРемняСумки: String, Codable {
+    case черезПлечо = "через плечо"
+}
+
+enum МатериалОправы: String, Codable {
+    case пластик = "пластик"
+    case металл = "металл"
+}
+
+enum МатериалЛинз: String, Codable {
+    case пластик = "пластик"
+}
+
+enum ЗащитаОтУф: String, Codable {
+    case the400 = "400"
+}
+
+enum МатериалВерха: String, Codable {
+    case the100полиэстер = "100% полиэстер"
+    case пластикСSoftпокрытием = "Пластик с soft touch покрытием"
+}
+
+enum Наполнитель: String, Codable {
+    case шерстипон = "шерстипон"
+    case the100хлопок = "100% хлопок"
+    case холлофайбер = "холлофайбер"
+}
 
 enum ТипЧехлов: String, Codable {
     case накладной = "накладной"
 }
-
 
 enum Материал: String, Codable {
     case натуральнаяКожа = "100% натуральная кожа"
@@ -113,6 +203,7 @@ enum Рисунок: String, Codable {
     case номер = "номер"
     case вышивка = "вышивка"
     case цифры = "цифры"
+    case герб = "герб"
 }
 
 enum Сезон: String, Codable {
