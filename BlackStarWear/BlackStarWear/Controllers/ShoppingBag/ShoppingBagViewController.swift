@@ -10,21 +10,25 @@ import UIKit
 
 class ShoppingBagViewController: UIViewController {
 
+    @IBOutlet weak var emptyShoppingBagContainerView: UIView!
+    @IBOutlet weak var productsInShoppingBagContainerView: UIView!
+    
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setNavigationBar()
+        print(name)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setNavigationBar() {
+        //Set BackBarButtonItem title
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "Назад", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 15)!], for: UIControl.State.normal)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Next", size: 16)!]
+        navigationItem.title = "Корзина"
     }
-    */
 
 }

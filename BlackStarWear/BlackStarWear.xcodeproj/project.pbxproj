@@ -62,6 +62,11 @@
 		A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */; };
 		A553E1AD24A61CC200EE61E1 /* SendAsATestContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1AC24A61CC200EE61E1 /* SendAsATestContainerViewController.swift */; };
 		A55922E924C59E89001DB104 /* AttributesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922E824C59E89001DB104 /* AttributesTableViewCell.swift */; };
+		A55922EB24C635A8001DB104 /* ProductsInShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922EA24C635A7001DB104 /* ProductsInShoppingBagViewController.swift */; };
+		A55922ED24C635CD001DB104 /* ProductsInShoppingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922EC24C635CD001DB104 /* ProductsInShoppingBagTableViewCell.swift */; };
+		A55922F024C636A2001DB104 /* Product.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55922EE24C636A2001DB104 /* Product.xcdatamodeld */; };
+		A55922F324C63725001DB104 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922F124C63725001DB104 /* Product+CoreDataClass.swift */; };
+		A55922F424C63725001DB104 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55922F224C63725001DB104 /* Product+CoreDataProperties.swift */; };
 		A55E6C5124B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E6C5024B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift */; };
 		A55E6C5324B7BA3500E5CA46 /* WomensSubcategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E6C5224B7BA3400E5CA46 /* WomensSubcategoriesTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +129,11 @@
 		A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendYourselfContainerViewController.swift; sourceTree = "<group>"; };
 		A553E1AC24A61CC200EE61E1 /* SendAsATestContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsATestContainerViewController.swift; sourceTree = "<group>"; };
 		A55922E824C59E89001DB104 /* AttributesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesTableViewCell.swift; sourceTree = "<group>"; };
+		A55922EA24C635A7001DB104 /* ProductsInShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInShoppingBagViewController.swift; sourceTree = "<group>"; };
+		A55922EC24C635CD001DB104 /* ProductsInShoppingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInShoppingBagTableViewCell.swift; sourceTree = "<group>"; };
+		A55922EF24C636A2001DB104 /* Product.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Product.xcdatamodel; sourceTree = "<group>"; };
+		A55922F124C63725001DB104 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A55922F224C63725001DB104 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A55E6C5024B7BA1900E5CA46 /* WomensSubcategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomensSubcategoriesViewController.swift; sourceTree = "<group>"; };
 		A55E6C5224B7BA3400E5CA46 /* WomensSubcategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomensSubcategoriesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +228,9 @@
 		A550285524A0E1F600774E0E = {
 			isa = PBXGroup;
 			children = (
+				A55922F124C63725001DB104 /* Product+CoreDataClass.swift */,
+				A55922F224C63725001DB104 /* Product+CoreDataProperties.swift */,
+				A55922EE24C636A2001DB104 /* Product.xcdatamodeld */,
 				A550286024A0E1F600774E0E /* BlackStarWear */,
 				A550285F24A0E1F600774E0E /* Products */,
 			);
@@ -293,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				A550288724A10B9E00774E0E /* ShoppingBagViewController.swift */,
+				A55922EA24C635A7001DB104 /* ProductsInShoppingBagViewController.swift */,
+				A55922EC24C635CD001DB104 /* ProductsInShoppingBagTableViewCell.swift */,
 			);
 			path = ShoppingBag;
 			sourceTree = "<group>";
@@ -489,6 +504,7 @@
 				A54F25F124B8984000567AF8 /* CollectionsSubcategoriesViewController.swift in Sources */,
 				A550288424A10B5F00774E0E /* ClothesViewController.swift in Sources */,
 				A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */,
+				A55922F024C636A2001DB104 /* Product.xcdatamodeld in Sources */,
 				A54AAE3E24B8FB18007EB792 /* OutletsSubcategoriesViewController.swift in Sources */,
 				A54F25E524B869EA00567AF8 /* ChildrenSubcategoryTableViewCell.swift in Sources */,
 				A550288824A10B9E00774E0E /* ShoppingBagViewController.swift in Sources */,
@@ -500,11 +516,15 @@
 				A54B312824B0F004003E5D88 /* GoodsLoader.swift in Sources */,
 				A55047E224C065E700DD27C0 /* SalesCollectionViewCell.swift in Sources */,
 				A550286624A0E1F700774E0E /* SalesViewController.swift in Sources */,
+				A55922EB24C635A8001DB104 /* ProductsInShoppingBagViewController.swift in Sources */,
 				A53BD55B24BE31AF0002182A /* UniversalDetailPopUpTableViewCell.swift in Sources */,
 				A54B3CFC24C0E0BC00BF7D2D /* SalesPopUpViewController.swift in Sources */,
+				A55922ED24C635CD001DB104 /* ProductsInShoppingBagTableViewCell.swift in Sources */,
 				A53BD55924BE31870002182A /* UniversalDetailPopUpViewController.swift in Sources */,
+				A55922F424C63725001DB104 /* Product+CoreDataProperties.swift in Sources */,
 				A54AAE4324B8FFB7007EB792 /* NewsSubcategoriesTableViewCell.swift in Sources */,
 				A54AAE4524B8FFCC007EB792 /* NewsSubcategoriesViewController.swift in Sources */,
+				A55922F324C63725001DB104 /* Product+CoreDataClass.swift in Sources */,
 				A54B3CFE24C0E0D700BF7D2D /* SalesPopUpTableViewCell.swift in Sources */,
 				A5509BFF24A208EF00C3EBD7 /* CategoriesLoader.swift in Sources */,
 				A53BD55724BE247E0002182A /* UniversalDetailGoodsViewController.swift in Sources */,
@@ -726,6 +746,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A55922EE24C636A2001DB104 /* Product.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A55922EF24C636A2001DB104 /* Product.xcdatamodel */,
+			);
+			currentVersion = A55922EF24C636A2001DB104 /* Product.xcdatamodel */;
+			path = Product.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A550285624A0E1F600774E0E /* Project object */;
 }
