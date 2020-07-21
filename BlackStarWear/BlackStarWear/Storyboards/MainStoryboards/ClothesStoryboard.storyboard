@@ -1548,6 +1548,9 @@
                                                 <state key="normal" title="Добавить в корзину">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addInShoppingBagButton:" destination="3po-4R-4N7" eventType="touchUpInside" id="mNH-qD-msk"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артикул:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Jdr-4V-fOa">
                                                 <rect key="frame" x="20" y="723.5" width="52" height="16.5"/>

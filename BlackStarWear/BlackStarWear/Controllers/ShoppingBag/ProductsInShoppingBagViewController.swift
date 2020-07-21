@@ -16,7 +16,22 @@ class ProductsInShoppingBagViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        let vc = UniversalDetailGoodsViewController()
+//        vc.delegate = self
         print(name)
     }
 
 }
+
+//extension ProductsInShoppingBagViewController: UniversalDetailGoodsViewControllerDelegate {
+//    func productData(name: String) {
+//        self.name = name
+//    }
+//
+//
+//}

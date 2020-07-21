@@ -8,7 +8,14 @@
 
 import UIKit
 
+//protocol  UniversalDetailGoodsViewControllerDelegate {
+//    func productData(name: String)
+//}
+
+
 class UniversalDetailGoodsViewController: UIViewController {
+    
+//    var delegate: UniversalDetailGoodsViewControllerDelegate?
 
     @IBOutlet weak var universalImageView: UIImageView!
     
@@ -185,6 +192,18 @@ class UniversalDetailGoodsViewController: UIViewController {
         let object = self.objects
         performSegue(withIdentifier: "PopUp", sender: object)
     }
+    
+    @IBAction func addInShoppingBagButton(_ sender: Any) {
+        if chooseSizeButtonOutlet.titleLabel?.text == "Выбрать размер" {
+            let object = self.objects
+            performSegue(withIdentifier: "PopUp", sender: object)
+        } else {
+//            self.delegate?.productData(name: "Okay")
+            let vc = ShoppingBagViewController()
+            vc.name = objects?.name.replacingOccurrences(of: "amp;", with: "")
+        }
+    }
+    
     
     
     

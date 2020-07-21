@@ -235,6 +235,7 @@ enum Состав: String, Codable {
     case хлопок88эластан10полиамид2 = "88% хлопок, 10% эластан, 2% полиамид"
     case хлопок8015полиамидэластан5 = "80% хлопок, 15% полиамид, 5% эластан"
     case пластмасса = "пластмасса"
+    case the100силикон = "100% силикон"
 }
 
 enum СтранаПроизводителя: String, Codable {
@@ -322,6 +323,7 @@ enum ColorName: String, Codable {
     case зеленый = "Зеленый"
     case персиковый = "Персиковый"
     case коричневыйГрадиент = "Коричневый градиент"
+    case оливковый = "Оливковый"
 }
 
 // MARK: - Offer
@@ -356,6 +358,7 @@ enum Size: String, Codable {
     case threeToFourYears2 = "3-4 лет"
     case fourToFiveYears = "4-5 лет"
     case sevenToNineYears = "7-9 лет"
+    case fiveToSixYears = "5-6 лет"
     case eightyFiveCM = "85 см"
     case nintyFiveCM = "95 см"
     case oneHundredAndFiveCM = "105 см"
