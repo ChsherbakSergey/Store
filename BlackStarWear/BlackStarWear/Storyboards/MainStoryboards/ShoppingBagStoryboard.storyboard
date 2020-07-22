@@ -148,12 +148,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIU-Hb-QT4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="613.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIU-Hb-QT4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="614.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="613.5" id="Dm7-Ja-9k0"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product" id="oNO-vu-Xsd" customClass="ProductsInShoppingBagTableViewCell" customModule="BlackStarWear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
@@ -187,8 +184,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-eI-ESP">
+                                                    <rect key="frame" x="0.0" y="149" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="EIa-Et-CSX"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="oIc-eI-ESP" secondAttribute="trailing" id="1es-5r-mdy"/>
                                                 <constraint firstItem="zI2-xZ-sJA" firstAttribute="trailing" secondItem="u0h-lA-ze9" secondAttribute="trailingMargin" id="KeV-xv-JyF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="rYh-Y8-GO9" secondAttribute="bottom" id="OJT-Fj-Rtz"/>
                                                 <constraint firstItem="BxT-Nm-o1h" firstAttribute="top" secondItem="MX4-ce-urM" secondAttribute="bottom" constant="5" id="OgI-co-3ma"/>
@@ -198,7 +203,9 @@
                                                 <constraint firstItem="MX4-ce-urM" firstAttribute="top" secondItem="u0h-lA-ze9" secondAttribute="topMargin" id="jx0-EX-I3g"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="MX4-ce-urM" secondAttribute="trailing" id="lRS-k9-WCc"/>
                                                 <constraint firstItem="rYh-Y8-GO9" firstAttribute="leading" secondItem="u0h-lA-ze9" secondAttribute="leadingMargin" id="mSe-VL-KfH"/>
+                                                <constraint firstAttribute="bottom" secondItem="oIc-eI-ESP" secondAttribute="bottom" id="oog-Uw-NmL"/>
                                                 <constraint firstItem="rYh-Y8-GO9" firstAttribute="top" secondItem="u0h-lA-ze9" secondAttribute="topMargin" id="ugK-a6-sFO"/>
+                                                <constraint firstItem="oIc-eI-ESP" firstAttribute="leading" secondItem="u0h-lA-ze9" secondAttribute="leading" id="v2U-B5-3bK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -234,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uia-wt-9Xn">
-                                <rect key="frame" x="0.0" y="613.5" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="614.5" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5RP-W7-RUs"/>
@@ -252,6 +259,7 @@
                             <constraint firstAttribute="trailing" secondItem="uia-wt-9Xn" secondAttribute="trailing" id="Je2-pZ-AWA"/>
                             <constraint firstItem="GIU-Hb-QT4" firstAttribute="top" secondItem="Bax-tZ-qwL" secondAttribute="top" id="UXT-AW-1dY"/>
                             <constraint firstItem="ArS-Wz-Bga" firstAttribute="leading" secondItem="Bax-tZ-qwL" secondAttribute="leadingMargin" constant="10" id="WS4-XB-8Y0"/>
+                            <constraint firstItem="2Gw-Zm-Yd8" firstAttribute="top" secondItem="GIU-Hb-QT4" secondAttribute="bottom" constant="15" id="WtF-DC-b4q"/>
                             <constraint firstItem="uia-wt-9Xn" firstAttribute="leading" secondItem="Bax-tZ-qwL" secondAttribute="leading" id="XNF-Pr-PPG"/>
                             <constraint firstAttribute="trailing" secondItem="GIU-Hb-QT4" secondAttribute="trailing" id="a9P-ee-3Mc"/>
                             <constraint firstItem="GIU-Hb-QT4" firstAttribute="leading" secondItem="Bax-tZ-qwL" secondAttribute="leading" id="kA0-45-TNW"/>
@@ -261,7 +269,6 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="GIU-Hb-QT4" id="Pe2-zF-sqm"/>
-                        <outlet property="tableViewHeightConstraint" destination="Dm7-Ja-9k0" id="MIf-58-yKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnL-aE-gAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

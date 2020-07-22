@@ -19,7 +19,7 @@ class ProductsInShoppingBagViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        setTableViewHeight()
+//        setTableViewHeight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,17 +28,23 @@ class ProductsInShoppingBagViewController: UIViewController {
 //        vc.delegate = self
 //        print(name)
         tableView.reloadData()
-        setTableViewHeight()
+//        setTableViewHeight()
         
     }
     
-    func setTableViewHeight() {
-        if Persisitance.shared.productImage.count == 0 {
-            tableViewHeightConstraint.constant = 0
-        } else {
-            tableViewHeightConstraint.constant = CGFloat(150 * Persisitance.shared.productImage.count)
-        }
-    }
+//    func setTableViewHeight() {
+//        if Persisitance.shared.productImage.count == 0 {
+//            tableViewHeightConstraint.constant = 0
+//        } else if Persisitance.shared.productImage.count == 1 {
+//            tableViewHeightConstraint.constant = 150
+//        } else if Persisitance.shared.productImage.count == 2 {
+//            tableViewHeightConstraint.constant = 300
+//        } else if Persisitance.shared.productImage.count == 3 {
+//            tableViewHeightConstraint.constant = 450
+//        } else {
+//            tableViewHeightConstraint.constant = 600
+//        }
+//    }
 
 }
 
@@ -81,7 +87,7 @@ extension ProductsInShoppingBagViewController: UITableViewDelegate, UITableViewD
             Persisitance.shared.productSize.remove(at: indexPath.row)
             Persisitance.shared.productPrice.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            setTableViewHeight()
+//            setTableViewHeight()
         }
     }
     
