@@ -13,12 +13,9 @@ class ShoppingBagViewController: UIViewController {
     @IBOutlet weak var emptyShoppingBagContainerView: UIView!
     @IBOutlet weak var productsInShoppingBagContainerView: UIView!
     
-    var name: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
-        print(name)
     }
     
     func setNavigationBar() {
