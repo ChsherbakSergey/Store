@@ -151,6 +151,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIU-Hb-QT4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="613.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="613.5" id="Dm7-Ja-9k0"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Product" id="oNO-vu-Xsd" customClass="ProductsInShoppingBagTableViewCell" customModule="BlackStarWear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
@@ -253,12 +256,12 @@
                             <constraint firstAttribute="trailing" secondItem="GIU-Hb-QT4" secondAttribute="trailing" id="a9P-ee-3Mc"/>
                             <constraint firstItem="GIU-Hb-QT4" firstAttribute="leading" secondItem="Bax-tZ-qwL" secondAttribute="leading" id="kA0-45-TNW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GNb-dd-h2a" secondAttribute="trailing" constant="10" id="rwE-3c-z1U"/>
-                            <constraint firstItem="2Gw-Zm-Yd8" firstAttribute="top" secondItem="uia-wt-9Xn" secondAttribute="bottom" constant="15" id="vvu-KK-1jU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VzG-fc-HDm"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="GIU-Hb-QT4" id="Pe2-zF-sqm"/>
+                        <outlet property="tableViewHeightConstraint" destination="Dm7-Ja-9k0" id="MIf-58-yKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnL-aE-gAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

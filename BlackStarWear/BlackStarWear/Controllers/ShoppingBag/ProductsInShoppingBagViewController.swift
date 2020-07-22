@@ -11,6 +11,7 @@ import UIKit
 class ProductsInShoppingBagViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
 //    var name: String = "Something"
     
@@ -18,6 +19,7 @@ class ProductsInShoppingBagViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        setTableViewHeight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,16 @@ class ProductsInShoppingBagViewController: UIViewController {
 //        vc.delegate = self
 //        print(name)
         tableView.reloadData()
+        setTableViewHeight()
+        
+    }
+    
+    func setTableViewHeight() {
+        if Persisitance.shared.productImage.count == 0 {
+            tableViewHeightConstraint.constant = 0
+        } else {
+            tableViewHeightConstraint.constant = CGFloat(150 * Persisitance.shared.productImage.count)
+        }
     }
 
 }
@@ -69,6 +81,7 @@ extension ProductsInShoppingBagViewController: UITableViewDelegate, UITableViewD
             Persisitance.shared.productSize.remove(at: indexPath.row)
             Persisitance.shared.productPrice.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            setTableViewHeight()
         }
     }
     
