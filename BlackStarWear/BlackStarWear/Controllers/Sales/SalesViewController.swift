@@ -37,7 +37,7 @@ class SalesController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        indicatorView.stopAnimating()
+        indicatorView.startAnimating()
     }
     
     override func viewDidAppear(_ animated: Bool) {

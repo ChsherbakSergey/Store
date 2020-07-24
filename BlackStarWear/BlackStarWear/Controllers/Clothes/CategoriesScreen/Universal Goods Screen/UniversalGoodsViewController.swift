@@ -25,7 +25,6 @@ class UniversalGoodsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
             loadGoods(goodsID: id!) {
-                if listOfGoodsInArray == nil {
                   if let goods = listOfGoods {
                     let array = Array(goods.values)
                     array.forEach { (value) in
@@ -36,11 +35,8 @@ class UniversalGoodsViewController: UIViewController {
                         self.collectionView.reloadData()
                     }
                 }
-                
-                } else {
-                    if let anotherGoods = listOfGoodsInArray {
-                        print(anotherGoods)
-                    }
+                if (listOfGoodsInArray?.isEmpty) == nil {
+                    Alert.showIncorrectFormatJSONAlert(on: self)
                 }
             }
         }

@@ -58,6 +58,7 @@
 		A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */; };
 		A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0324A2625200C3EBD7 /* InformationCellData.swift */; };
 		A5509C0A24A2974A00C3EBD7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */; };
+		A552000724CB530500D04F9A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552000624CB530500D04F9A /* Alert.swift */; };
 		A553E1A624A5DDDB00EE61E1 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */; };
 		A553E1A824A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */; };
 		A553E1AA24A6189700EE61E1 /* SendYourselfContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */; };
@@ -126,6 +127,7 @@
 		A5509C0124A260D300C3EBD7 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
 		A5509C0324A2625200C3EBD7 /* InformationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCellData.swift; sourceTree = "<group>"; };
 		A5509C0924A2974A00C3EBD7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A552000624CB530500D04F9A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A553E1A524A5DDDB00EE61E1 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A724A6126B00EE61E1 /* SendAsAGiftCertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAsAGiftCertificateViewController.swift; sourceTree = "<group>"; };
 		A553E1A924A6189700EE61E1 /* SendYourselfContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendYourselfContainerViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				A54E24DA24B758C300158BDE /* ImageLoader.swift */,
 				A54E24DC24B758D000158BDE /* OrderingArray.swift */,
 				A54D29F724C8862B0025E098 /* Persistance.swift */,
+				A552000624CB530500D04F9A /* Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				A54AAE4024B8FB34007EB792 /* OutletsSubcategoriesTableViewCell.swift in Sources */,
 				A5509C0424A2625200C3EBD7 /* InformationCellData.swift in Sources */,
 				A54F25EC24B8797E00567AF8 /* AcsessoriesSubcategoriesTableViewCell.swift in Sources */,
+				A552000724CB530500D04F9A /* Alert.swift in Sources */,
 				A54F25F124B8984000567AF8 /* CollectionsSubcategoriesViewController.swift in Sources */,
 				A550288424A10B5F00774E0E /* ClothesViewController.swift in Sources */,
 				A5509C0224A260D300C3EBD7 /* InformationTableViewCell.swift in Sources */,
