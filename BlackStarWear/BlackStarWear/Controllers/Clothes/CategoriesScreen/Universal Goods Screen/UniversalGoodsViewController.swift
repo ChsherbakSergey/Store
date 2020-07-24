@@ -12,6 +12,8 @@ class UniversalGoodsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
     var objects: [GoodsValue] = []
     var universalNameArray: [String] = []
     var id: Int?
@@ -34,6 +36,16 @@ class UniversalGoodsViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        indicatorView.startAnimating()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        indicatorView.stopAnimating()
     }
     
     func setNavigationBar() {

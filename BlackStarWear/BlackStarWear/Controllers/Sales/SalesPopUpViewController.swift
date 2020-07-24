@@ -55,6 +55,13 @@ extension SalesPopUpViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let data = objects?.offers[indexPath.row].size.rawValue
         sizeDelegate?.didChooseSize(size: data ?? "Размер не выбран")
+        
+        let size = objects?.offers[indexPath.row].size.rawValue
+        Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
+        Persisitance.shared.productSize.append("Размер: \(size!)")
+        Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
+        Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
+        
         dismiss(animated: true, completion: nil)
     }
     

@@ -36,7 +36,7 @@ class SalesDetailViewController: UIViewController {
     
     var objects: GoodsValue?
     var checkForItem: String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableViewHight()
@@ -184,23 +184,21 @@ class SalesDetailViewController: UIViewController {
                     let object = self.objects
                     performSegue(withIdentifier: "PopUp", sender: object)
                 } else {
-                    Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
-                    Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
-                    Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
-                    Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
-                    
+//                    Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
+//                    Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
+//                    Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
+//                    Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
         //            Persisitance.shared.productImage.removeAll()
         //            Persisitance.shared.productName.removeAll()
         //            Persisitance.shared.productPrice.removeAll()
         //            Persisitance.shared.productSize.removeAll()
                     
-                    print(Persisitance.shared.productName)
-                    print(Persisitance.shared.productSize)
-                    print(Persisitance.shared.productPrice)
-                    print(Persisitance.shared.productImage)
+//                    print(Persisitance.shared.productName)
+//                    print(Persisitance.shared.productSize)
+//                    print(Persisitance.shared.productPrice)
+//                    print(Persisitance.shared.productImage)
                 }
     }
-    
     
 }
 

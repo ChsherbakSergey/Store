@@ -11,6 +11,7 @@ import UIKit
 class SalesController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     var objects: [GoodsValue] = []
     var outletsNameArray: [String] = []
@@ -32,6 +33,16 @@ class SalesController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        indicatorView.stopAnimating()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        indicatorView.stopAnimating()
     }
 
     func setNavigationBar() {

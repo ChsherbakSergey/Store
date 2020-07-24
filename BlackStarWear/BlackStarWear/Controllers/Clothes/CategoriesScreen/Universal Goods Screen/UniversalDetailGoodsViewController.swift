@@ -201,20 +201,20 @@ class UniversalDetailGoodsViewController: UIViewController {
 //            self.delegate?.productData(name: "Okay")
 //            let vc = ShoppingBagViewController()
 //            vc.name = objects?.name.replacingOccurrences(of: "amp;", with: "")
-            Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
-            Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
-            Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
-            Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
+//            Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
+//            Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
+//            Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
+//            Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
             
 //            Persisitance.shared.productImage.removeAll()
 //            Persisitance.shared.productName.removeAll()
 //            Persisitance.shared.productPrice.removeAll()
 //            Persisitance.shared.productSize.removeAll()
             
-            print(Persisitance.shared.productName)
-            print(Persisitance.shared.productSize)
-            print(Persisitance.shared.productPrice)
-            print(Persisitance.shared.productImage)
+//            print(Persisitance.shared.productName)
+//            print(Persisitance.shared.productSize)
+//            print(Persisitance.shared.productPrice)
+//            print(Persisitance.shared.productImage)
         }
     }
     

@@ -25,6 +25,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="M2J-tL-is8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Outlets" id="Y0H-HL-31u" customClass="SalesCollectionViewCell" customModule="BlackStarWear" customModuleProvider="target">
                                         <rect key="frame" x="103" y="0.0" width="208" height="341"/>
@@ -111,6 +115,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="lyK-Uq-wzl" id="6eY-DE-ja5"/>
+                        <outlet property="indicatorView" destination="M2J-tL-is8" id="JVA-Pt-r7m"/>
                         <segue destination="1W0-t2-ZP0" kind="show" identifier="ToDetail" id="GcB-Kn-ikS"/>
                     </connections>
                 </viewController>
@@ -444,7 +449,7 @@
                                             <constraint firstAttribute="height" constant="1" id="XRp-5Z-IXA"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-Ea-XGf">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="35" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-Ea-XGf">
                                         <rect key="frame" x="0.0" y="54" width="414" height="277"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
@@ -467,10 +472,20 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFj-xg-wOH">
+                                                            <rect key="frame" x="0.0" y="34" width="414" height="1"/>
+                                                            <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="dSS-2U-z8o"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="pd6-cU-Pvo" firstAttribute="leading" secondItem="Mvq-B7-o05" secondAttribute="leading" constant="15" id="Bvr-7v-Kws"/>
                                                         <constraint firstAttribute="trailing" secondItem="FGf-lY-UeR" secondAttribute="trailing" constant="50" id="C1a-Tc-mui"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zFj-xg-wOH" secondAttribute="bottom" id="CVX-Sb-b3P"/>
+                                                        <constraint firstItem="zFj-xg-wOH" firstAttribute="leading" secondItem="Mvq-B7-o05" secondAttribute="leading" id="Ek6-RK-0Dq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zFj-xg-wOH" secondAttribute="trailing" id="Ez8-aj-5Vq"/>
                                                         <constraint firstItem="FGf-lY-UeR" firstAttribute="centerY" secondItem="Mvq-B7-o05" secondAttribute="centerY" id="XDo-Yp-F2l"/>
                                                         <constraint firstItem="pd6-cU-Pvo" firstAttribute="centerY" secondItem="Mvq-B7-o05" secondAttribute="centerY" id="zL3-Ba-als"/>
                                                     </constraints>
@@ -517,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5D-ht-eSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3596" y="-1313"/>
+            <point key="canvasLocation" x="3595.652173913044" y="-1313.1696428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YLB-Go-9xe">
