@@ -24,19 +24,26 @@ class UniversalGoodsViewController: UIViewController {
         setNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
-        loadGoods(goodsID: id!) {
-            if let goods = listOfGoods {
-                let array = Array(goods.values)
-                array.forEach { (value) in
-                    self.objects = array
-                    self.universalNameArray.append(value.name)
+            loadGoods(goodsID: id!) {
+                if listOfGoodsInArray == nil {
+                  if let goods = listOfGoods {
+                    let array = Array(goods.values)
+                    array.forEach { (value) in
+                        self.objects = array
+                        self.universalNameArray.append(value.name)
+                    }
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
                 }
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                
+                } else {
+                    if let anotherGoods = listOfGoodsInArray {
+                        print(anotherGoods)
+                    }
                 }
             }
         }
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

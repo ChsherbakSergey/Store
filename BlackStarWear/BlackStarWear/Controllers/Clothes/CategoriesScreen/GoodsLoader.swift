@@ -647,11 +647,25 @@ class JSONAny: Codable {
 // MARK: - Parse JSON
 
 var listOfGoods: Goods?
+var listOfGoodsInArray : [Goods]?
 
 func loadGoods(goodsID: Int, completed: @escaping () -> ()) {
     let urlString = "https://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(goodsID)"
     let url = URL(string: urlString)
     
+//    URLSession.shared.dataTask(with: url!) { (data, response, error) in
+//        if let data = data {
+//            do {
+//                let goods = try JSONDecoder().decode(Goods.self, from: data)
+//                listOfGoods = goods
+//                DispatchQueue.main.async {
+//                    completed()
+//                }
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }.resume()
     URLSession.shared.dataTask(with: url!) { (data, response, error) in
         if let data = data {
             do {
@@ -661,6 +675,12 @@ func loadGoods(goodsID: Int, completed: @escaping () -> ()) {
                     completed()
                 }
             } catch {
+                do {
+                    let goodsArray = try JSONDecoder().decode([Goods].self, from: data)
+                    listOfGoodsInArray = goodsArray
+                } catch {
+                    print(error)
+                }
                 print(error)
             }
         }
