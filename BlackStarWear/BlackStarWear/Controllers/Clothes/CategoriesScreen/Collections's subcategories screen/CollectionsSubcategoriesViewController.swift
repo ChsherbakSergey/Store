@@ -38,7 +38,7 @@ class CollectionsSubcategoriesViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                let subcategoryOrdering = HardCodedOrdering(ordering: "Generation 13", "Gold Lion", "Terminal 13", "KIDS ID", "Art Spray", "RUS", "LUX", "BB LINES", "Коллекция Black Star Mafia", "Wings", "BSW Design", "UNIT", "BS Color", "CALLIGRAPHY", "Пашу", "Likee", "MOT Merch", "Natan", "Все товары категории")
+                let subcategoryOrdering = HardCodedOrdering(ordering: "Generation 13", "Gold Lion", "Terminal 13", "KIDS ID", "Art Spray", "RUS", "LUX", "BB LINES", "Коллекция Black Star Mafia", "Wings", "BSW Design", "UNIT", "BS Color", "CALLIGRAPHY", "Пашу", "Likee", "Natan", "Все товары категории")
                 let someSubcategories = self.arrayOfCollectionsSubcategories
                 let realSubcategories = someSubcategories.lazy.filter(subcategoryOrdering.contains)
                 self.sortedCollectionsSubcategories = realSubcategories.sorted(by: subcategoryOrdering.areInIncreasingOrder)
@@ -136,11 +136,11 @@ class CollectionsSubcategoriesViewController: UIViewController {
             destVC.id = sender as? Int
             destVC.titleOfNavigationBar = "Likee"
         }
-        if segue.identifier == "MOTMerch" {
-            let destVC = segue.destination as! UniversalGoodsViewController
-            destVC.id = sender as? Int
-            destVC.titleOfNavigationBar = "MOT Merch"
-        }
+//        if segue.identifier == "MOTMerch" {
+//            let destVC = segue.destination as! UniversalGoodsViewController
+//            destVC.id = sender as? Int
+//            destVC.titleOfNavigationBar = "MOT Merch"
+//        }
         if segue.identifier == "Natan" {
             let destVC = segue.destination as! UniversalGoodsViewController
             destVC.id = sender as? Int
@@ -242,12 +242,14 @@ extension CollectionsSubcategoriesViewController: UITableViewDelegate, UITableVi
             let cell = tableView.dequeueReusableCell(withIdentifier: "Likee") as! CollectionsSubcategoriesTableViewCell
             cell.collectionsSubcategoryNameLabel.text = subcategory
             return cell
-        } else if indexPath.row == 16 {
-           let subcategory = sortedCollectionsSubcategories[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MOTMerch") as! CollectionsSubcategoriesTableViewCell
-            cell.collectionsSubcategoryNameLabel.text = subcategory
-            return cell
-        } else if indexPath.row == 17 {
+        }
+//        else if indexPath.row == 16 {
+//           let subcategory = sortedCollectionsSubcategories[indexPath.row]
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "MOTMerch") as! CollectionsSubcategoriesTableViewCell
+//            cell.collectionsSubcategoryNameLabel.text = subcategory
+//            return cell
+//        }
+        else if indexPath.row == 16 {
            let subcategory = sortedCollectionsSubcategories[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "Natan") as! CollectionsSubcategoriesTableViewCell
             cell.collectionsSubcategoryNameLabel.text = subcategory
@@ -326,15 +328,15 @@ extension CollectionsSubcategoriesViewController: UITableViewDelegate, UITableVi
             let data = 319
             performSegue(withIdentifier: "Likee", sender: data)
         }
+//        if indexPath.row == 16 {
+//            let data = 151
+//            performSegue(withIdentifier: "MOTMerch", sender: data)
+//        }
         if indexPath.row == 16 {
-            let data = 151
-            performSegue(withIdentifier: "MOTMerch", sender: data)
-        }
-        if indexPath.row == 17 {
             let data = 241
             performSegue(withIdentifier: "Natan", sender: data)
         }
-        if indexPath.row == 18 {
+        if indexPath.row == 17 {
             let data = 68
             performSegue(withIdentifier: "AllGoods", sender: data)
         }
