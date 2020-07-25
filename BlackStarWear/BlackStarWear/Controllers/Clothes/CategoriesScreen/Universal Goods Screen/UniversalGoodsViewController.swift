@@ -35,10 +35,13 @@ class UniversalGoodsViewController: UIViewController {
                         self.collectionView.reloadData()
                     }
                 }
-                if listOfGoodsInArray?.count == 0 {
-                    Alert.showIncorrectFormatJSONAlert(on: self)
-                }
+//                if self.id == 173 {
+//                    Alert.showIncorrectFormatJSONAlert(on: self)
+//                }
             }
+        if self.id == 173 {
+            Alert.showIncorrectFormatJSONAlert(on: self)
+        }
         }
     
     override func viewWillAppear(_ animated: Bool) {
