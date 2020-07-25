@@ -12,6 +12,8 @@ class ProductsInShoppingBagViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var priceLabel: UILabel!
+    var newPrice: [Int] = []
     
 //    var name: String = "Something"
     
@@ -29,7 +31,7 @@ class ProductsInShoppingBagViewController: UIViewController {
 //        print(name)
         tableView.reloadData()
 //        setTableViewHeight()
-        
+        setPrice()
     }
     
 //    func setTableViewHeight() {
@@ -46,6 +48,22 @@ class ProductsInShoppingBagViewController: UIViewController {
 //        }
 //    }
 
+    func setPrice() {
+//        newPrice = Persisitance.shared.productPrice.map({(Int($0) ?? 0)})
+        if Persisitance.shared.productPrice.isEmpty == true {
+            priceLabel.text = "0 руб."
+        }
+//        for i in Persisitance.shared.productPrice {
+//            newPrice.append(Int(i) ?? 0)
+//        }
+        newPrice = Persisitance.shared.productPrice.map({(Int($0) ?? 0)})
+        var summ = 0
+        for i in newPrice {
+            summ += i
+        }
+        priceLabel.text = String(summ) + " руб."
+    }
+    
 }
 
 //extension ProductsInShoppingBagViewController: UniversalDetailGoodsViewControllerDelegate {
@@ -71,7 +89,7 @@ extension ProductsInShoppingBagViewController: UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "Product") as! ProductsInShoppingBagTableViewCell
         cell.productNameLabel.text = name
         cell.productSizeLabel.text = size
-        cell.productPriceLabel.text = price
+        cell.productPriceLabel.text = price + " руб."
         cell.setImage(from: image)
         return cell
     }
@@ -88,6 +106,7 @@ extension ProductsInShoppingBagViewController: UITableViewDelegate, UITableViewD
             Persisitance.shared.productPrice.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
 //            setTableViewHeight()
+            setPrice()
         }
     }
     

@@ -18,7 +18,7 @@ struct Alert {
     }
     
     static func showIncorrectFormatJSONAlert(on vc: UIViewController) {
-        showAlert(on: vc, with: "okay", message: "no")
+        showAlert(on: vc, with: "Ошибка", message: "Упс! Кажется товары данной категории остсутствуют в данный момент.")
     }
     
 }

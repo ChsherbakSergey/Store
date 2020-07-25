@@ -134,6 +134,12 @@ class SalesDetailViewController: UIViewController {
                 outletsColorImageView.backgroundColor = UIColor.gray
             } else if objects?.colorName.rawValue == "Прозрачный" {
                 setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/pusto.png")
+            } else if objects?.colorName.rawValue == "Молочный" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/milk_f8f3ed.jpg")
+            } else if objects?.colorName.rawValue == "Светло-розовый" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/pale-pink_ffd1dc.jpg")
+            } else if objects?.colorName.rawValue == "Экрю" {
+                setColorImage(from: "https://blackstarshop.ru/" + "image/catalog/style/color/milk_f8f3ed.jpg")
             }
     }
     
@@ -184,10 +190,10 @@ class SalesDetailViewController: UIViewController {
                     let object = self.objects
                     performSegue(withIdentifier: "PopUp", sender: object)
                 } else {
-//                    Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
-//                    Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
-//                    Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
-//                    Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
+                    Persisitance.shared.productName.append((objects?.name.replacingOccurrences(of: "amp;", with: ""))!)
+                    Persisitance.shared.productSize.append((chooseSizeButtonOutlet.titleLabel?.text)!)
+                    Persisitance.shared.productPrice.append(String(objects!.price.dropLast(5)) + " руб.")
+                    Persisitance.shared.productImage.append("https://blackstarshop.ru/" + "\(objects!.mainImage)")
         //            Persisitance.shared.productImage.removeAll()
         //            Persisitance.shared.productName.removeAll()
         //            Persisitance.shared.productPrice.removeAll()

@@ -35,7 +35,7 @@ class UniversalGoodsViewController: UIViewController {
                         self.collectionView.reloadData()
                     }
                 }
-                if listOfGoodsInArray != nil {
+                if listOfGoodsInArray?.count == 0 {
                     Alert.showIncorrectFormatJSONAlert(on: self)
                 }
             }
